@@ -1,0 +1,146 @@
+.modal {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-color: rgba(0, 0, 0, .8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	cursor: pointer
+}
+
+.modal-inner {
+	background-color: #fff;
+	max-width: 750px;
+	opacity: 1;
+	z-index: 999;
+	display: flex;
+	cursor: default;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	padding: 52px;
+	padding-bottom: 42px;
+	width: 50%;
+}
+
+.right {
+	width: 50%;
+}
+
+.italic.modal_italic {
+	font-size: 26px;
+	margin-bottom: 15px;
+}
+
+.uppercase.modal_uppercase {
+	margin-top: 24px;
+	margin-bottom: 38px;
+	font-size: 16px;
+}
+
+.form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input.modal_input {
+	margin-bottom: 23px;
+}
+
+.input.modal_input:last-child {
+	margin-bottom: 34px;
+}
+
+.modal_button_filled {
+	width: 100%;
+	margin-bottom: 16px;
+}
+
+.politicy {
+	display: flex;
+	justify-content: center;
+    width: 100%;
+}
+
+.politicy > div {
+	display: flex;
+	align-items: center;
+	font-size: 12px;
+}
+
+.checkbox-wrap.modal_checkbox-wrap {
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+/* Customize the label (the container) */
+.checkbox-wrap {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-wrap:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-wrap input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-wrap input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-wrap .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

@@ -1,0 +1,143 @@
+@import "./_vars.scss";
+
+@media (max-width: 770px) {
+
+	body {
+		overflow-x: hidden;
+	}
+
+    .wrapper {
+        max-width: 770px;
+    }
+
+	// main
+	.sale.main_block {
+		flex-direction: column;
+	    gap: 30px;
+	}
+
+	.button_filled.main_button {
+		margin-top: 39px;
+		align-self: flex-start;
+	}
+
+	.main {
+		margin-bottom: 61px;
+	}
+
+	// benefits
+	.uppercase.benefits_uppercase {
+		font-size: 14px;
+	}
+
+	// complex
+	.complex {
+		padding: 5rem 2rem;
+	}
+
+	.image-wrap {
+	    margin-right: 40px;	
+	}
+
+	.complex-inner {
+		padding: 32px;
+	}
+
+	.complex-item {
+		margin-bottom: 16px;
+		padding-bottom: 16px;
+	}
+	
+	.price.complex_price {
+		font-size: 15px;
+	}
+
+	.offer-name.complex_offer-name {
+	    margin-right: 20px;
+        font-size: 13px;
+	}
+
+	// tariff
+	.tariff {
+		padding: 0;
+		padding-top: 30px;
+	}
+
+	.tariff-list {
+		gap: 30px;
+        flex-direction: column;
+        align-items: center;
+	}
+
+	.tariff-item {
+		margin-right: 0;
+		min-width: 300px;
+	}
+
+	// accordion 
+
+	.card, .cardless {
+		padding: 0 56px;
+	}
+
+	.accordion-content {
+		margin-left: 56px;
+	}
+
+	.qna_accordion-button {
+		width: 100%!important;
+	}
+
+	.qna_accordion-content {
+		width: 100%!important;
+	}
+ 
+	// soprano
+
+	.soprano-pluses:first-child {
+		margin-right: 30px;
+	}
+
+	.soprano-pluses:last-child {
+		margin-left: 30px;
+	}
+
+	// consultation
+
+	.consultation {
+		padding: 3rem 1.5rem;
+	}
+
+	.uppercase.consultation_uppercase {
+		margin-bottom: 30px;	
+	}
+
+	.button_empty.consultation_button-empty {
+		margin-top: 16px;
+	}
+
+	.right > img {
+		width: 100%;
+	}
+
+	.left {
+		padding: 40px;
+	}
+
+	.italic.consultation_italic {
+		font-size: 24px;
+	}
+
+	.button-group > button {
+		width: 100%;
+	}
+
+	.button_empty.consultation_button-empty {
+		margin-left: 0;
+	}
+
+	.image {
+		height: 100%;
+		object-fit: cover;
+	}
+}

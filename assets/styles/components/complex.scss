@@ -1,0 +1,92 @@
+@import "../utils/_vars";
+@import "./global.scss";
+
+// complex
+.complex {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("../images/jaimie-phillips.png") no-repeat;
+    background-size: cover;
+    padding: 6rem;	
+}
+
+.complex-inner {
+	background-color: #fff;
+	width: auto;
+	padding: 65px;
+    display: flex;
+    flex-direction: column;
+}
+
+.complex-content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.image-wrap {
+	margin-right: 65px;
+}
+
+.image {
+	max-width: 100%;
+}
+
+.complex-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.complex-item {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 24px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid $base-green;
+}
+
+.complex-item:first-child {
+	padding-top: 24px;
+}
+
+.complex-item:nth-child(3) {
+	margin-bottom: 25px;
+}
+
+.complex_button__wrap {
+    height: 100%;
+	display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.sale.complex_sale {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.offer-name.complex_offer-name {
+	margin-right: 70px;
+}
+
+
+.italic.complex_italic {
+	margin-bottom: 20px;
+}
+
+.uppercase.complex_uppercase {
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+
+.regular.complex_regular__size {
+	font-size: $fs-base - 4;
+}
+
+.button_filled.complex_button_filled {
+	padding: 14px!important;
+	margin-top: 16px;
+	inline-size: fit-content;
+}

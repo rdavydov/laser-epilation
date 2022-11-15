@@ -1,0 +1,69 @@
+// мин и макс ширина области просмотра
+$max-w: 1140px - 40;
+$min-w: 320px;
+
+// шрифты
+@font-face {
+	font-family: "NotoSansDisplay-Bold";  
+	src: url("../../assets/fonts/NotoSansDisplay-Bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "NotoSansDisplay-SemiBold";  
+	src: url("../../assets/fonts/NotoSansDisplay-SemiBold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "NotoSansDisplay-Regular";  
+	src: url("../../assets/fonts/NotoSansDisplay-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "NotoSerifDisplay-Bold";  
+	src: url("../../assets/fonts/NotoSerifDisplay-Bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "NotoSerifDisplay-LightItalic";  
+	src: url("../../assets/fonts/NotoSerifDisplay-LightItalic.ttf") format("truetype");
+}
+
+$ff-sans-bold: "NotoSansDisplay-Bold";
+$ff-sans-semibold: "NotoSansDisplay-SemiBold";
+$ff-sans-regular: "NotoSansDisplay-Regular";
+$ff-serif-bold: "NotoSerifDisplay-Bold";
+$ff-serif-lightitalic: "NotoSerifDisplay-LightItalic";
+ 
+$fs-base: 16px;
+
+$fs-btn: $fs-base;
+$fs-p3: 40px;
+$fs-p2: 24px;
+$fs-p1: 32px;
+$fs-h4: $fs-p1;
+$fs-h3: $fs-p3;
+$fs-h2: 65px;
+$fs-h1: 77px;
+
+$fs-t-btn: $fs-base;
+$fs-t-p3: 40px;
+$fs-t-p2: 24px;
+$fs-t-p1: 28px;
+$fs-t-h4: 29px;
+$fs-t-h3: $fs-p3;
+$fs-t-h2: 50px;
+$fs-t-h1: 58px;
+
+$fs-m-btn: $fs-base;
+$fs-m-p3: 40px;
+$fs-m-p2: 24px;
+$fs-m-p1: 29px;
+$fs-m-h4: 32px;
+$fs-m-h3: 34px;
+$fs-m-h2: 38px;
+$fs-m-h1: 46px;
+
+
+// цвета
+$base-green: #53613D;
+$base-darkgreen: #3F492E;
+$base-grey: #333333;
+$base-pink: #FAF5F1;
+$base-white: #FFFFFF;
+$base-black: #000000;

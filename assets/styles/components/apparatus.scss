@@ -1,0 +1,50 @@
+@import "../utils/_vars";
+@import "./global.scss";
+
+// apparatus
+.apparatus {
+	padding: 64px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.soprano {
+	display: flex;
+	align-items: center;
+	margin-bottom: 45px;
+}
+
+.soprano-pluses:first-child {
+	margin-right: 75px;
+}
+
+.soprano-pluses:last-child {
+	margin-left: 75px;
+}
+
+.soprano-pluses:first-child > .soprano-item:last-child ,
+.soprano-pluses:last-child > .soprano-item:last-child {
+	margin-bottom: 0;
+}
+
+.soprano-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
+.italic.club_italic {
+	margin-bottom: 30px;
+}
+
+.uppercase.club_uppercase {
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.icon.apparatus_icon {
+	width: 62px;
+	height: 62px;
+	margin-right: 25px;
+}

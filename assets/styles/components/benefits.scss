@@ -1,0 +1,55 @@
+@import "../utils/_vars";
+@import "./global.scss";
+
+// benefits
+.benefits {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 60px;
+}
+
+.italic.benefits_italic {
+	margin-bottom: 22px;
+}
+
+.uppercase.benefits_uppercase {
+	margin-top: 33px;
+	margin-bottom: 45px;
+}
+
+.regular.benefits_regular {
+	text-align: center;
+}
+
+.icon.benefits_icon {
+	width: 72px;
+}
+
+.regular.benefits_regular__license {
+	cursor: pointer;
+	padding-bottom: 2px;
+	border-bottom: 1px dotted $base-green;
+	transition: border-bottom-style .3s;
+}
+
+.regular.benefits_regular__license:hover {
+	border-bottom: 1px solid $base-green;
+}
+
+.benefits-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	row-gap: 35px;
+	column-gap: 80px;
+}
+
+.benefits-item {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.icon.benefits_icon {
+	margin-bottom: 20px;
+}

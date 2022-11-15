@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Центр лазерной эпиляции</title>
+
+    <!--  Swiper.js  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <style>
+        .result {
+            padding: 64px 0!important;
+        }
+
+        .swiper {
+            width: 96vw;
+            min-height: 300px;
+            -webkit-touch-callout: none; /* iOS Safari */
+		    -webkit-user-select: none; /* Safari */
+		     -khtml-user-select: none; /* Konqueror HTML */
+		       -moz-user-select: none; /* Old versions of Firefox */
+		        -ms-user-select: none; /* Internet Explorer/Edge */
+		            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper2 {
+            position: relative;
+            display: flex;
+    		align-items: center;
+        }
+
+        .swiper1 > .swiper-wrapper > .swiper-slide > .image.slider_image {
+        	margin-right: 30px	;
+        }
+
+        .swiper-opacity-left {
+        	opacity: .50;
+        	background-color: #fff;
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	bottom: 0;
+        	z-index: 4;
+        }
+
+        .swiper-opacity-right {
+        	opacity: .50;
+        	background-color: #fff;
+        	position: absolute;
+        	top: 0;
+        	right: 0;
+        	bottom: 0;
+        	z-index: 4;
+        }
+
+        .swiper-button-next:after, .swiper-button-prev:after {
+            display: none;
+        }
+
+        .swiper-button-next.bubble,
+        .swiper-button-prev.bubble {
+            width: 35px;
+            height: 35px;
+        }
+
+        .swiper-button-next, .swiper-rtl .swiper-button-prev {
+            right: 35px;
+        }
+
+        .swiper-button-prev, .swiper-rtl .swiper-button-next {
+            left: 40px;
+        }
+
+        .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+        	border: 1px solid #53613D;
+        	background-color: #fff;
+        	opacity: 1;
+        }
+
+        .swiper-button-next.swiper-button-disabled > img,
+        .swiper-button-prev.swiper-button-disabled > img {
+        	filter: invert(100%) sepia(7%) saturate(2421%) hue-rotate(41deg) brightness(93%) contrast(79%);
+        }
+
+        .swiper-pagination {
+            position: static;
+            padding-top: 20px;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #53613D;
+        }
+
+        @media (max-width: 768px) {
+            .swiper-slide {
+                flex-direction: column;
+            }
+
+            .swiper1 > .swiper-wrapper > .swiper-slide > .image.slider_image {
+                margin-right: 0!important;
+                margin-bottom: 30px;
+            }
+
+            .swiper-button-next, .swiper-rtl .swiper-button-prev {
+                right: 15%;
+            }
+
+            .swiper-button-prev, .swiper-rtl .swiper-button-next {
+                left: 15%;
+            }
+
+            .image {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 565px) {
+            .swiper-button-next, .swiper-rtl .swiper-button-prev {
+                right: 10%;
+            }
+
+            .swiper-button-prev, .swiper-rtl .swiper-button-next {
+                left: 10%;
+            }
+        }
+    </style>
+
+    <!--  Styles  -->
+	<link rel="stylesheet" href="assets/styles/output.css">
+	<link rel="stylesheet" href="assets/styles/output.css.map">
+</head>
+<body>
+
+	<div class="modal">
+		<div class="modal-inner">
+			<div class="left">
+				<h1 class="italic center modal_italic">
+					Оставьте заявку
+				</h1>
+				<div class="line"></div>
+				<h2 class="uppercase center modal_uppercase">
+					мы&nbsp;перезвоним
+					<br>
+					в&nbsp;течение 30&nbsp;мин.
+				</h2>
+				<div class="form">
+					<input placeholder="Ваше имя" type="text" class="input modal_input">
+					<input placeholder="Ваш номер телефона" type="text" class="input modal_input">
+					<button class="button_filled uppercase center modal_button_filled">
+						перезвоните мне
+					</button>
+					<div class="politicy">
+						<label class="checkbox-wrap modal_checkbox-wrap">
+						  <input type="checkbox" checked="checked">
+						  <span class="checkmark"></span>
+						</label>
+						<div>
+							<span style="width: 180px">Я согласен с <span class="dotted">политикой конфидециальности</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<img src="assets/images/modal-img.png" class="modal-image" alt="">
+			</div>
+		</div>
+	</div>
+
+	<div class="background half">
+		<img class="background_image image" src="assets/images/shutterstock_67.png" alt="background">
+	</div>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="contacts header_block">
+				<p class="uppercase header_address">
+					мытищи, ул. мира, 35
+					<br>
+					жк «ярославский»
+				</p>
+				<p class="phone">
+					<svg class="icon header-icon__phone" enable-background="new 0 0 25.625 25.625" version="1.1" viewBox="0 0 25.625 25.625" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m22.079 17.835c-1.548-1.324-3.119-2.126-4.648-0.804l-0.913 0.799c-0.668 0.58-1.91 3.29-6.712-2.234-4.801-5.517-1.944-6.376-1.275-6.951l0.918-0.8c1.521-1.325 0.947-2.993-0.15-4.71l-0.662-1.04c-1.102-1.713-2.302-2.838-3.827-1.515l-0.824 0.72c-0.674 0.491-2.558 2.087-3.015 5.119-0.55 3.638 1.185 7.804 5.16 12.375 3.97 4.573 7.857 6.87 11.539 6.83 3.06-0.033 4.908-1.675 5.486-2.272l0.827-0.721c1.521-1.322 0.576-2.668-0.973-3.995l-0.931-0.801z" fill="#53623D"/></svg>
+					+7 985 220-01-06
+				</p>
+			</div>
+			<div class="logo header_block">
+				<object class="logo header_logo" data="assets/images/7005.png"></object>
+				<p class="uppercase">центр лазерной эпиляции</p>
+			</div>
+			<div class="reception header_block">
+				<button class="button_empty header_button uppercase">Записаться</button>
+				<a class="uppercase link header_link" href="https://wa.me/+7985220-01-06">написать в whatsapp</a>
+			</div>
+		</header>
+
+		<section class="main">
+			<div class="background half main_background">
+    			<img class="background_image" src="assets/images/lingerie-nude.jpg" alt="background">
+			</div>
+
+			<div class="text">
+				<h1 class="italic main_italic">
+					Гладкая красивая кожа
+					<br>
+                    в профессиональном центре
+                    <br>
+                    лазерной эпиляции
+				</h1> 
+				<ul class="list main_list">
+					<li class="list-item">Лучший аппарат с гибридным лучом</li>
+					<li class="list-item">Медицинская лицензия</li>
+				</ul>
+				<div class="sale main_block">
+					<button class="button_filled uppercase main_button">получить скидку</button>
+					<img src="assets/images/sale.png" alt="" class="image sale">
+				</div>
+			</div>
+		</section>
+
+		<section class="benefits">
+			<h1 class="italic center benefits_italic">
+				Мы нашли для вас самый 
+				<br>
+				эффективный способ
+				<br>
+				лазерной эпиляции
+			</h1>
+			<div class="line"></div>
+			<h2 class="uppercase center benefits_uppercase">
+				с нами безопасно! забудьте про воск и бритву, 
+				<br>
+				ваша кожа будет гладкой как шелк
+			</h2>
+
+			<div class="benefits-list">
+				<div class="benefits-item">
+					<img class="icon benefits_icon" src="assets/icons/002-laser.svg" alt="icon">
+					<p class="regular benefits_regular">
+						Не работаем на подделках и слабом оборудовании
+					</p>
+				</div>
+				<div class="benefits-item">
+					<img class="icon benefits_icon" src="assets/icons/001-gloves.svg" alt="icon">
+					<p class="regular benefits_regular">
+						Все нормы по САНПиН
+					</p>
+				</div>
+				<div class="benefits-item">
+					<img class="icon benefits_icon" src="assets/icons/003-certificate.svg" alt="icon">
+					<p class="regular benefits_regular benefits_regular__license">
+						Медлицензия
+					</p>
+				</div>
+				<div class="benefits-item">
+					<img class="icon benefits_icon" src="assets/icons/002-ruble.svg" alt="icon">
+					<p class="regular benefits_regular">
+						Не завышаем цены. Не уменьшаем мощности и не считаем вспышки. Работаем на результат
+					</p>
+				</div>
+				<div class="benefits-item">
+					<img class="icon benefits_icon" src="assets/icons/006-doctor.svg" alt="icon">
+					<p class="regular benefits_regular">
+						Процедуры проводят только сертифицированные специалисты, врачи-дерматокосметологи
+					</p>
+				</div>
+				<div class="benefits-item">
+					<img class="icon benefits_icon" src="assets/icons/005-low-temperature.svg" alt="icon">
+					<p class="regular benefits_regular">
+						У нашего оборудования мощная система охлаждения, что исключает реакции кожи в виде ожогов
+					</p>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<section class="complex">
+		<div class="complex-inner">
+			<h1 class="italic center complex_italic">
+				С системой «Безлимит» вы получите
+				<br>
+				гладкое тело без лишних трат
+			</h1>
+			<div class="line"></div>
+			<h2 class="uppercase center complex_uppercase">
+				Будет повод обновить гардероб платьем и показывать 
+				<br>
+				красивые гладкие ноги
+			</h2>
+			<div class="complex-content">
+				<div class="image-wrap">
+					<img src="assets/images/legs.png" alt="legs" class="image">
+				</div>
+				<div class="complex-list">
+					<div class="complex-item">
+						<h3 class="offer-name complex_offer-name">
+							комплекс «Тело» 
+							<br>
+							1-й сеанс
+						</h3>
+						<div class="sale complex_sale">
+							<p class="price complex_price">2 990 ₽</p>
+							<s class="regular complex_regular">9 600</s>
+						</div>
+					</div>
+					<div class="complex-item">
+						<h3 class="offer-name complex_offer-name">
+							комплекс «Тело»
+							<br>
+							безлимит на 6 месяцев
+						</h3>
+						<div class="sale complex_sale">
+							<p class="price complex_price">20 900 ₽</p>
+							<s class="regular complex_regular">67 200</s>
+						</div>
+					</div>
+					<div class="complex-item">
+						<h3 class="offer-name complex_offer-name">
+							комплекс «Тело»
+							<br>
+							безлимит на 1 год
+						</h3>
+						<div class="sale complex_sale">
+							<p class="price complex_price">39 900 ₽</p>
+							<s class="regular complex_regular">134 500</s>
+						</div>
+					</div>
+					<p class="regular complex_regular__size">
+						В комплекс «Тело» входит: ноги тотал,
+						<br>
+						бикини тотал, подмышки, руки до локтя, 1 зона на лице
+					</p>
+					<div class="complex_button__wrap">
+						<button class="button_filled uppercase complex_button_filled">
+							Получить спеццену
+						</button>						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="wrapper">
+		
+		<section class="tariff">
+			<h1 class="italic center tariff_italic">выгодные предложения</h1>
+			<div class="tariff-list">
+				<div class="tariff-item">
+					<h3 class="offer-name center">
+						Все тело 
+						<br>
+						«STANDART»
+					</h3>
+					<ul class="list">
+						<li class="list-item">
+							Голени + колени
+						</li>
+						<li class="list-item">
+							Бикини (любое)
+						</li>
+						<li class="list-item">
+							Подмышечные впадины
+						</li>
+						<li class="list-item">
+							Малая зона MINI
+						</li>
+					</ul>
+					<div class="tariff-bottom">
+						<p class="price">2 500 ₽</p>
+						<p class="regular center">
+							по карте / в абонементе
+							<br>
+							от 5 сеансов
+						</p>
+						<div class="line tariff_line"></div>
+						<p class="regular center">
+							3 990 ₽
+							<br>
+							без карты
+						</p>
+					</div>
+				</div>
+
+				<div class="tariff-item">
+					<h3 class="offer-name center">
+						Все тело
+						<br>
+						«STANDART+»
+					</h3>
+					<ul class="list">
+						<li class="list-item">
+							Ноги полностью
+						</li>
+						<li class="list-item">
+							Бикини (любое)
+						</li>
+						<li class="list-item">
+							Подмышечные впадины
+						</li>
+						<li class="list-item">
+							Руки до локтя
+						</li>
+					</ul>
+					<div class="tariff-bottom">
+						<p class="price">2 900 ₽</p>
+						<p class="regular center">
+							по карте / в абонементе
+							<br>
+							от 5 сеансов
+						</p>
+						<div class="line tariff_line"></div>
+						<p class="regular center">
+							4 990 ₽
+							<br>
+							без карты
+						</p>
+					</div>
+				</div>
+
+				<div class="tariff-item">
+					<h3 class="offer-name center">
+						Все тело
+						<br>
+						«TOTAL»
+					</h3>
+					<p class="regular center tariff_regular">
+						Любые зоны, без ограничения, исключая зоны лица
+					</p>	
+					<div class="tariff-bottom">
+						<p class="price">
+							4 500 ₽
+						</p>
+						<p class="regular center">
+							по карте / в абонементе
+							<br>
+							от 5 сеансов
+						</p>
+						<div class="line tariff_line"></div>
+						<p class="regular center">
+							5 990 ₽
+							<br>
+							без карты
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="tariff_button__wrap">
+				<button class="button_filled uppercase">
+					записаться
+				</button>
+			</div>
+		</section>
+
+		<section class="zone">
+			<h1 class="italic center zone_italic">
+				Любая зона по фиксированной цене
+			</h1>
+			<div class="accordion">
+				<div class="accordion-item">
+					<div class="accordion-background"></div>
+					<div class="accordion-button">
+						<div>
+							<div class="bubble accordion_bubble">
+								<img src="assets/icons/down-arrow.png" alt="arrow" class="arrow">
+							</div>
+							<h3 class="offer-name">
+								Зоны mini
+							</h3>
+						</div>
+						<div>
+							<div class="cardless">
+								<p class="price">
+									990 ₽
+								</p>
+								<p class="regular center accordion_regular">
+									без карты
+								</p>
+							</div>
+							<div class="card">
+								<p class="price accordion_price">
+									690 ₽
+								</p>
+								<p class="regular center accordion_regular accordion_regular__color">
+									по карте / в абонементе
+									<br>
+									от 5 сеансов
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="line-group">
+						<div class="line-biege"></div>
+						<div class="line-green"></div>
+					</div>
+					<div class="accordion-content">
+						<ul class="list-non-styled">
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px;">
+								Лицо и шея
+							</li>
+
+							<li class="list-non-styled-item">Верхняя губа</li>
+							<li class="list-non-styled-item">Подбородок</li>
+							<li class="list-non-styled-item">Уши</li>
+							<li class="list-non-styled-item">Нос</li>
+							<li class="list-non-styled-item">Межбровье</li>
+							<li class="list-non-styled-item">Височная область</li>
+							<li class="list-non-styled-item">Бакенбарды</li>
+							<li class="list-non-styled-item">Шея передняя и задняя часть</li>
+							<li class="list-non-styled-item">Лоб</li>
+							<li class="list-non-styled-item">Щеки</li>
+						</ul>
+
+						<ul class="list-non-styled">
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px;">
+								Руки
+							</li>
+
+							<li class="list-non-styled-item">Кисти рук</li>
+							<li class="list-non-styled-item">Пальцы рук</li>
+
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px; margin-top: 20px;">
+								Туловище
+							</li>
+
+							<li class="list-non-styled-item">Подмышечные впадины</li>
+							<li class="list-non-styled-item">Ореолы сосков</li>
+							<li class="list-non-styled-item">Белая линия живота</li>
+						</ul>
+						
+						<ul class="list-non-styled">
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px;">
+								Бикини
+							</li>
+
+							<li class="list-non-styled-item">Межъяшодичная зона</li>
+
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px; margin-top: 20px;">
+								Ноги
+							</li>
+
+							<li class="list-non-styled-item">Фаланги пальцев</li>
+							<li class="list-non-styled-item">Колени</li>
+							<li class="list-non-styled-item">Подъем ног</li>
+						</ul>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<div class="accordion-background"></div>
+					<div class="accordion-button">
+						<div>
+							<div class="bubble accordion_bubble">
+								<img src="assets/icons/down-arrow.png" alt="arrow" class="arrow">
+							</div>
+							<h3 class="offer-name">
+								Зоны midi
+							</h3>
+						</div>
+						<div>
+							<div class="cardless">
+								<p class="price">
+									1 990 ₽
+								</p>
+								<p class="regular center accordion_regular">
+									без карты
+								</p>
+							</div>
+							<div class="card">
+								<p class="price accordion_price">
+									1 300 ₽
+								</p>
+								<p class="regular center accordion_regular accordion_regular__color">
+									по карте / в абонементе
+									<br>
+									от 5 сеансов
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="line-group">
+						<div class="line-biege"></div>
+						<div class="line-green"></div>
+					</div>
+					<div class="accordion-content">
+						<ul class="list-non-styled">
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px;">
+								Лицо и шея
+							</li>
+
+							<li class="list-non-styled-item">Верхняя губа</li>
+							<li class="list-non-styled-item">Подбородок</li>
+							<li class="list-non-styled-item">Уши</li>
+							<li class="list-non-styled-item">Нос</li>
+							<li class="list-non-styled-item">Межбровье</li>
+							<li class="list-non-styled-item">Височная область</li>
+							<li class="list-non-styled-item">Бакенбарды</li>
+							<li class="list-non-styled-item">Шея передняя и задняя часть</li>
+							<li class="list-non-styled-item">Лоб</li>
+							<li class="list-non-styled-item">Щеки</li>
+						</ul>
+
+						<ul class="list-non-styled">
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px;">
+								Руки
+							</li>
+
+							<li class="list-non-styled-item">Кисти рук</li>
+							<li class="list-non-styled-item">Пальцы рук</li>
+
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px; margin-top: 20px;">
+								Туловище
+							</li>
+
+							<li class="list-non-styled-item">Подмышечные впадины</li>
+							<li class="list-non-styled-item">Ореолы сосков</li>
+							<li class="list-non-styled-item">Белая линия живота</li>
+						</ul>
+						
+						<ul class="list-non-styled">
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px;">
+								Бикини
+							</li>
+
+							<li class="list-non-styled-item">Межъяшодичная зона</li>
+
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px; margin-top: 20px;">
+								Ноги
+							</li>
+
+							<li class="list-non-styled-item">Фаланги пальцев</li>
+							<li class="list-non-styled-item">Колени</li>
+							<li class="list-non-styled-item">Подъем ног</li>
+						</ul>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<div class="accordion-background"></div>
+					<div class="accordion-button">
+						<div>
+							<div class="bubble accordion_bubble">
+								<img src="assets/icons/down-arrow.png" alt="arrow" class="arrow">
+							</div>
+							<h3 class="offer-name">
+								Зоны maxi
+							</h3>
+						</div>
+						<div>
+							<div class="cardless">
+								<p class="price">
+									2 490 ₽
+								</p>
+								<p class="regular center accordion_regular">
+									без карты
+								</p>
+							</div>
+							<div class="card">
+								<p class="price accordion_price">
+									1 590 ₽
+								</p>
+								<p class="regular center accordion_regular accordion_regular__color">
+									по карте / в абонементе
+									<br>
+									от 5 сеансов
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="line-group">
+						<div class="line-biege"></div>
+						<div class="line-green"></div>
+					</div>
+					<div class="accordion-content">
+						<ul class="list-non-styled">
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px;">
+								Лицо и шея
+							</li>
+
+							<li class="list-non-styled-item">Верхняя губа</li>
+							<li class="list-non-styled-item">Подбородок</li>
+							<li class="list-non-styled-item">Уши</li>
+							<li class="list-non-styled-item">Нос</li>
+							<li class="list-non-styled-item">Межбровье</li>
+							<li class="list-non-styled-item">Височная область</li>
+							<li class="list-non-styled-item">Бакенбарды</li>
+							<li class="list-non-styled-item">Шея передняя и задняя часть</li>
+							<li class="list-non-styled-item">Лоб</li>
+							<li class="list-non-styled-item">Щеки</li>
+						</ul>
+
+						<ul class="list-non-styled">
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px;">
+								Руки
+							</li>
+
+							<li class="list-non-styled-item">Кисти рук</li>
+							<li class="list-non-styled-item">Пальцы рук</li>
+
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px; margin-top: 20px;">
+								Туловище
+							</li>
+
+							<li class="list-non-styled-item">Подмышечные впадины</li>
+							<li class="list-non-styled-item">Ореолы сосков</li>
+							<li class="list-non-styled-item">Белая линия живота</li>
+						</ul>
+						
+						<ul class="list-non-styled">
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px;">
+								Бикини
+							</li>
+
+							<li class="list-non-styled-item">Межъяшодичная зона</li>
+
+							<li class="list-non-styled-item bold" style="margin-bottom: 10px; margin-top: 20px;">
+								Ноги
+							</li>
+
+							<li class="list-non-styled-item">Фаланги пальцев</li>
+							<li class="list-non-styled-item">Колени</li>
+							<li class="list-non-styled-item">Подъем ног</li>
+						</ul>
+					</div>
+				</div>
+			</div>		
+		</section>
+
+	</div>
+
+	<section class="club">
+		<div class="club-inner">
+			<h1 class="italic center club_italic">Клубная карта</h1>
+			<div class="line"></div>
+			<h3 class="uppercase center club_uppercase">
+				Стоимость карт На право обслуживаться по цене КАРТЫ
+			</h3>
+			<div class="club-list">
+				<div class="club-item">
+					<img src="assets/icons/crown.png" alt="icon" class="icon club_icon">
+					<p class="offer-name club_offer-name">
+						на 3 месяца
+					</p>
+					<p class="price">
+						1 290 ₽
+					</p>
+				</div>
+
+				<div class="vertical-line"></div>
+
+				<div class="club-item">
+					<img src="assets/icons/crown.png" alt="icon" class="icon club_icon">
+					<p class="offer-name club_offer-name">
+						на 6 месяцев
+					</p>
+					<p class="price">
+						2 000 ₽
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="apparatus">
+		<h1 class="italic center club_italic">
+			Почему мы любим лазерную эпиляцию 
+			<br>
+			Soprano Ice Platinum
+		</h1>
+		<div class="line"></div>
+		<h3 class="uppercase center club_uppercase">
+			Гибридный луч сочетает в себе 3 вида лазера: диод + александрит + неодим
+		</h3>
+		<div class="soprano">
+			<div class="soprano-pluses">
+				<div class="soprano-item">
+					<img src="assets/icons/005-health-insurance.svg" alt="icon" class="icon apparatus_icon">
+					<p class="regular">
+						Безболезненно и безопасно
+					</p>
+				</div>
+				<div class="soprano-item">
+					<img src="assets/icons/006-hip.svg" alt="icon" class="icon apparatus_icon">
+					<p class="regular soprano_regular__types">
+						Подходит для всех типов
+						<br>
+						кожи и волос: чувствительная,
+						<br>
+						загорелая кожа; рыжие, седые
+						<br>
+						и светлые волосы
+					</p>
+				</div>
+				<div class="soprano-item">
+					<img src="assets/icons/001-clock.svg" alt="icon" class="icon apparatus_icon">
+					<p class="regular">
+						Процедура проходит быстро
+					</p>
+				</div>
+			</div>
+			<div class="soprano-image">
+				<img src="assets/images/soprano-platinum.png" alt="soprano ice platinum" class="image">
+			</div>
+			<div class="soprano-pluses">
+				<div class="soprano-item">
+					<img src="assets/icons/003-hair.svg" alt="icon" class="icon apparatus_icon">
+					<p class="regular">
+						Избавляет от лишних
+						<br>
+						волос навсегда
+					</p>
+				</div>
+				<div class="soprano-item">
+					<img src="assets/icons/004-skin.svg" alt="icon" class="icon apparatus_icon">
+					<p class="regular">
+						Красивая ровная кожа
+						<br>
+						без высыпаний
+					</p>
+				</div>
+				<div class="soprano-item">
+					<img src="assets/icons/007-feathers.svg" alt="icon" class="icon apparatus_icon">
+					<p class="regular">
+						Никакого раздражения,
+						<br>
+						врастающих волос и точек
+						<br>
+						от волосков
+					</p>
+				</div>
+			</div>
+		</div>
+		<button class="button_empty uppercase">Принцип работы лазера</button>
+	</section>
+
+	<section class="result">
+		<h1 class="italic center result_italic">
+			Наши результаты до/после
+		</h1>
+		<div class="line"></div>
+		<h3 class="uppercase center result_uppercase">
+			Гладкость в любое время, никакой щетины, ровный цвет кожи. Хочешь так же?
+		</h3>
+		<div class="swiper swiper1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide result_slider-item">
+                    <img class="image slider_image" src="assets/images/dirty.png" alt="dirty">
+                    <img class="image" src="assets/images/clear.png" alt="clear">
+                </div>
+                <div class="swiper-slide result_slider-item">
+                    <img class="image slider_image" src="assets/images/dirty.png" alt="dirty">
+                    <img class="image" src="assets/images/clear.png" alt="clear">
+                </div>
+                <div class="swiper-slide result_slider-item">
+                    <img class="image slider_image" src="assets/images/dirty.png" alt="dirty">
+                    <img class="image" src="assets/images/clear.png" alt="clear">
+                </div>
+            </div>
+            <div class="swiper-button-prev bubble">
+                <img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__prev">
+            </div>
+            <div class="swiper-button-next bubble">
+                <img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__next">
+            </div>
+		</div>
+        <div class="swiper-pagination"></div>
+        <button class="button_filled uppercase result_button">
+			Записаться
+		</button>
+	</section>
+
+	<section class="testimonials">
+		<h1 class="italic center testimonials_italic">
+			Отзывы
+		</h1>
+		<div class="line"></div>
+		<div class="swiper swiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide result_slider-item example-slide">
+					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+                </div>
+                <div class="swiper-slide result_slider-item">
+					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+                </div>
+                <div class="swiper-slide result_slider-item">
+					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+                </div>
+                <div class="swiper-slide result_slider-item">
+					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+                </div>
+                <div class="swiper-slide result_slider-item">
+					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+                </div>
+                <div class="swiper-slide result_slider-item">
+					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+                </div>
+                <div class="swiper-slide result_slider-item">
+					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+                </div>
+                <div class="swiper-slide result_slider-item">
+					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+                </div>
+                <div class="swiper-slide result_slider-item">
+					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+                </div>
+                <div class="swiper-slide result_slider-item">
+					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+                </div>
+            </div>
+			<div class="swiper-opacity-left"></div>
+			<div class="swiper-opacity-right"></div>
+            <div class="swiper-button-prev bubble">
+                <img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__prev">
+            </div>
+            <div class="swiper-button-next bubble">
+                <img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__next">
+            </div>
+		</div>
+		<!-- <div class="slider" style="margin-top: 30px;">
+			<div class="slider-inner testimonials_slider-inner">
+				<button class="slider-prev" disabled>
+					<div class="bubble">
+						<img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__prev">
+					</div>
+				</button>
+				<div class="slider-container testimonials_slider-container">
+					<div class="slider-track testimonials_slider-track">
+						<div class="slider-item testimonials_slider-item">
+							<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+						</div>
+						<div class="slider-item testimonials_slider-item">
+							<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+						</div>
+						<div class="slider-item testimonials_slider-item">
+							<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+						</div>
+						<div class="slider-item testimonials_slider-item">
+							<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+						</div>
+						<div class="slider-item testimonials_slider-item">
+							<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
+						</div>
+					</div>
+				</div>
+				<button class="slider-next">
+					<div class="bubble">
+						<img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__next">
+					</div>
+				</button>
+			</div>			
+		</div> -->
+	</section>
+
+	<section class="qna">
+		<h1 class="italic center testimonials_italic">
+			Вопрос/ответ
+		</h1>
+		<div class="line"></div>
+		<div class="accordion qna_accordion">
+			<div class="accordion-item qna_accordion-item">
+				<div 
+					class="accordion-button qna_accordion-button"
+					style="
+						display: flex;
+						align-items: center;
+						height: 100%;
+						width: 60%;
+					"
+				>
+					<h1 class="bold qna_bold">Как проходит процедура?</h1>
+					<span class="bubble qna_bubble">
+						<img src="assets/icons/plus.png" alt="arrow" class="plus">
+					</span>
+				</div>
+				<div class="accordion-content qna_accordion-content" style="width: 60%; margin: 0;">
+					<p class="regular">
+						Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Doloremque aut nesciunt autem ab cupiditate distinctio cum corrupti voluptate nam, perferendis quae nihil hic similique maxime quisquam officia vitae sapiente in illum suscipit. Sunt, tempora cupiditate vitae incidunt a veritatis quod. 
+						<br>
+						Quis fuga nobis, et corrupti aperiam enim iure adipisci sunt.
+						Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Deserunt repellendus architecto veniam tenetur commodi atque earum qui aliquid aliquam quae?
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item qna_accordion-item">
+				<div 
+					class="accordion-button qna_accordion-button"
+					style="
+						display: flex;
+						align-items: center;
+						height: 100%;
+						width: 60%;
+					"
+				>
+					<h1 class="bold qna_bold">Как подготовиться к процедуре</h1>
+					<span class="bubble qna_bubble">
+						<img src="assets/icons/plus.png" alt="arrow" class="plus">
+					</span>
+				</div>
+				<div class="accordion-content qna_accordion-content" style="width: 60%; margin: 0;">
+					<p class="regular">
+						Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Doloremque aut nesciunt autem ab cupiditate distinctio cum corrupti voluptate nam, perferendis quae nihil hic similique maxime quisquam officia vitae sapiente in illum suscipit. Sunt, tempora cupiditate vitae incidunt a veritatis quod. 
+						<br>
+						Quis fuga nobis, et corrupti aperiam enim iure adipisci sunt.
+						Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Deserunt repellendus architecto veniam tenetur commodi atque earum qui aliquid aliquam quae?
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item qna_accordion-item">
+				<div 
+					class="accordion-button qna_accordion-button"
+					style="
+						display: flex;
+						align-items: center;
+						height: 100%;
+						width: 60%;
+					"
+				>
+					<h1 class="bold qna_bold">Какие рекомендации надо соблюдать после процедуры?</h1>
+					<span class="bubble qna_bubble">
+						<img src="assets/icons/plus.png" alt="arrow" class="plus">
+					</span>
+				</div>
+				<div class="accordion-content qna_accordion-content" style="width: 60%; margin: 0;">
+					<p class="regular">
+						Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Doloremque aut nesciunt autem ab cupiditate distinctio cum corrupti voluptate nam, perferendis quae nihil hic similique maxime quisquam officia vitae sapiente in illum suscipit. Sunt, tempora cupiditate vitae incidunt a veritatis quod. 
+						<br>
+						Quis fuga nobis, et corrupti aperiam enim iure adipisci sunt.
+						Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Deserunt repellendus architecto veniam tenetur commodi atque earum qui aliquid aliquam quae?
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item qna_accordion-item">
+				<div 
+					class="accordion-button qna_accordion-button"
+					style="
+						display: flex;
+						align-items: center;
+						height: 100%;
+						width: 60%;
+					"
+				>
+					<h1 class="bold qna_bold">Сколько нужно процедур?</h1>
+					<span class="bubble qna_bubble">
+						<img src="assets/icons/plus.png" alt="arrow" class="plus">
+					</span>
+				</div>
+				<div class="accordion-content qna_accordion-content" style="width: 60%; margin: 0;">
+					<p class="regular">
+						Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Doloremque aut nesciunt autem ab cupiditate distinctio cum corrupti voluptate nam, perferendis quae nihil hic similique maxime quisquam officia vitae sapiente in illum suscipit. Sunt, tempora cupiditate vitae incidunt a veritatis quod. 
+						<br>
+						Quis fuga nobis, et corrupti aperiam enim iure adipisci sunt.
+						Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Deserunt repellendus architecto veniam tenetur commodi atque earum qui aliquid aliquam quae?
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item qna_accordion-item">
+				<div 
+					class="accordion-button qna_accordion-button"
+					style="
+						display: flex;
+						align-items: center;
+						height: 100%;
+						width: 60%;
+					"
+				>
+					<h1 class="bold qna_bold">Какие ограничения и противопоказания?</h1>
+					<span class="bubble qna_bubble">
+						<img src="assets/icons/plus.png" alt="arrow" class="plus">
+					</span>
+				</div>
+				<div class="accordion-content qna_accordion-content" style="width: 60%; margin: 0;">
+					<p class="regular">
+						Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Doloremque aut nesciunt autem ab cupiditate distinctio cum corrupti voluptate nam, perferendis quae nihil hic similique maxime quisquam officia vitae sapiente in illum suscipit. Sunt, tempora cupiditate vitae incidunt a veritatis quod. 
+						<br>
+						Quis fuga nobis, et corrupti aperiam enim iure adipisci sunt.
+						Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Deserunt repellendus architecto veniam tenetur commodi atque earum qui aliquid aliquam quae?
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item qna_accordion-item">
+				<div 
+					class="accordion-button qna_accordion-button"
+					style="
+						display: flex;
+						align-items: center;
+						height: 100%;
+						width: 60%;
+					"
+				>
+					<h1 class="bold qna_bold">Болезненна ли процедура?</h1>
+					<span class="bubble qna_bubble">
+						<img src="assets/icons/plus.png" alt="arrow" class="plus">
+					</span>
+				</div>
+				<div class="accordion-content qna_accordion-content" style="width: 60%; margin: 0;">
+					<p class="regular">
+						Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Doloremque aut nesciunt autem ab cupiditate distinctio cum corrupti voluptate nam, perferendis quae nihil hic similique maxime quisquam officia vitae sapiente in illum suscipit. Sunt, tempora cupiditate vitae incidunt a veritatis quod. 
+						<br>
+						Quis fuga nobis, et corrupti aperiam enim iure adipisci sunt.
+						Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Deserunt repellendus architecto veniam tenetur commodi atque earum qui aliquid aliquam quae?
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item qna_accordion-item">
+				<div 
+					class="accordion-button qna_accordion-button"
+					style="
+						display: flex;
+						align-items: center;
+						height: 100%;
+						width: 60%;
+					"
+				>
+					<h1 class="bold qna_bold">Чем ваш аппарат лучше других?</h1>
+					<span class="bubble qna_bubble">
+						<img src="assets/icons/plus.png" alt="arrow" class="plus">
+					</span>
+				</div>
+				<div class="accordion-content qna_accordion-content" style="width: 60%; margin: 0;">
+					<p class="regular">
+						Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Doloremque aut nesciunt autem ab cupiditate distinctio cum corrupti voluptate nam, perferendis quae nihil hic similique maxime quisquam officia vitae sapiente in illum suscipit. Sunt, tempora cupiditate vitae incidunt a veritatis quod. 
+						<br>
+						Quis fuga nobis, et corrupti aperiam enim iure adipisci sunt.
+						Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Deserunt repellendus architecto veniam tenetur commodi atque earum qui aliquid aliquam quae?
+					</p>
+				</div>
+			</div>
+			<div class="accordion-item qna_accordion-item">
+				<div 
+					class="accordion-button qna_accordion-button"
+					style="
+						display: flex;
+						align-items: center;
+						height: 100%;
+						width: 60%;
+					"
+				>
+					<h1 class="bold qna_bold">Какие могут быть реакции кожи после процедуры?</h1>
+					<span class="bubble qna_bubble">
+						<img src="assets/icons/plus.png" alt="arrow" class="plus">
+					</span>
+				</div>
+				<div class="accordion-content qna_accordion-content" style="width: 60%; margin: 0; padding-bottom: 0;">
+					<p class="regular">
+						Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Doloremque aut nesciunt autem ab cupiditate distinctio cum corrupti voluptate nam, perferendis quae nihil hic similique maxime quisquam officia vitae sapiente in illum suscipit. Sunt, tempora cupiditate vitae incidunt a veritatis quod. 
+						<br>
+						Quis fuga nobis, et corrupti aperiam enim iure adipisci sunt.
+						Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Deserunt repellendus architecto veniam tenetur commodi atque earum qui aliquid aliquam quae?
+					</p>
+				</div>
+			</div>
+		</div>	
+	</section>
+
+	<section class="consultation">
+		<div class="consultation-inner">
+			<div class="left">
+				<h1 class="italic center consultation_italic">
+					Остались вопросы?
+					<br>
+	                Запишитесь
+	                <br>
+	                на консультацию
+	                <br>
+	                к специалисту 
+				</h1>
+				<div class="line"></div>
+				<h3 class="uppercase center consultation_uppercase">
+					Закажите обратный звонок
+					<br>
+					или напишите нам 
+				</h3>
+				<div class="button-group">
+					<button class="button_filled uppercase">
+						Перезвоните мне
+					</button>
+					<button class="button_empty uppercase consultation_button-empty">
+						Написать в Whatsapp
+					</button>
+				</div>
+			</div>
+			<div class="right">
+				<img src="assets/images/una-joven-tiern.jpg" alt="nudes" class="image">
+			</div>
+		</div>
+	</section>
+
+	<div class="wrapper">
+		<footer class="footer">
+			<div class="footer-inner">
+				<div class="left footer_left">
+				<img src="assets/images/furniture.png" alt="#">
+				<div class="slider-indicator">
+					<div class="slider-indicator-item active" id="indicator_1"></div>
+					<div class="slider-indicator-item" id="indicator_2"></div>
+					<div class="slider-indicator-item" id="indicator_3"></div>
+				</div>
+			</div>
+			<div class="right footer_right">
+				<h1 class="italic center footer_italic">
+					Контакты
+				</h1>
+				<div class="line"></div>
+				<div class="contacts footer_contacts">
+					<p class="uppercase center footer_uppercase">
+						Мытищи, ул. Мира, 35
+						<br>
+						ЖК «Ярославский»
+						<br>
+						Ежедневно 10:00 – 22:00
+					</p>
+					<p class="phone center footer_center">
+						<svg class="icon footer_icon" enable-background="new 0 0 25.625 25.625" version="1.1" viewBox="0 0 25.625 25.625" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m22.079 17.835c-1.548-1.324-3.119-2.126-4.648-0.804l-0.913 0.799c-0.668 0.58-1.91 3.29-6.712-2.234-4.801-5.517-1.944-6.376-1.275-6.951l0.918-0.8c1.521-1.325 0.947-2.993-0.15-4.71l-0.662-1.04c-1.102-1.713-2.302-2.838-3.827-1.515l-0.824 0.72c-0.674 0.491-2.558 2.087-3.015 5.119-0.55 3.638 1.185 7.804 5.16 12.375 3.97 4.573 7.857 6.87 11.539 6.83 3.06-0.033 4.908-1.675 5.486-2.272l0.827-0.721c1.521-1.322 0.576-2.668-0.973-3.995l-0.931-0.801z" fill="#53623D"/></svg>
+
+						8 (985) 220-01-06
+						<br>
+						8 (985) 220-01-07
+					</p>
+					<p class="map center footer_center footer_center__map">
+						<svg class="icon footer_icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
+						 	width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+							<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+								fill="#53613D" stroke="none">
+								<path d="M2360 5109 c-402 -46 -781 -229 -1071 -518 -480 -481 -650 -1189
+								-438 -1833 67 -206 127 -306 928 -1548 424 -657 776 -1195 781 -1195 5 0 357
+								538 781 1195 803 1246 861 1343 929 1550 225 692 3 1474 -548 1933 -384 320
+								-878 471 -1362 416z m425 -918 c321 -85 570 -339 652 -668 26 -103 23 -323 -6
+								-428 -118 -436 -544 -724 -985 -666 -361 48 -661 311 -757 666 -32 115 -32
+								335 0 450 92 341 356 587 707 660 97 20 285 13 389 -14z"/>
+							</g>
+						</svg>
+
+						Показать на карте
+					</p>
+				</div>
+			</div>
+			</div>
+
+			<p
+				class="regular center benefits_regular__license"
+				style="
+					margin-bottom: 40px;
+				"
+			>
+				Политика конфидециальности
+			</p>
+		</footer>
+	</div>
+
+    <!--  Swiper.js scripts  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+
+        const swiper1 = new Swiper(".swiper1", {
+            slidesPerView: 1,
+            loop: true,
+            observer: true,
+            observeParents: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
+
+        const swiper2 = new Swiper(".swiper2", {
+            slidesPerView: 5,
+            spaceBetween: 30,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+			    1024: {
+			    	slidesPerView: 4
+			    },
+			    770: {
+			    	slidesPerView: 3,
+			    },
+			    425: {
+			    	slidesPerView: 1
+			    }
+		    }	
+        });
+    </script>
+
+    <!--  Scripts  -->
+	<script src="assets/js/accordion.js"></script>
+	<script src="assets/js/slider.js"></script>
+	<script src="assets/js/drag-to-scroll.js"></script>
+	<script src="assets/js/viewport.js"></script>
+</body>
+</html>

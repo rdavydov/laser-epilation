@@ -1,0 +1,134 @@
+@import "../utils/_vars";
+
+body {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	font-family: $ff-sans-regular;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	max-width: $max-w;
+	padding: 0 20px;
+	width: 100%;
+	z-index: 1;
+}
+
+.background.half {
+	top: 0;
+	right: 0;
+	width: 50%;
+}
+
+.icon {
+	color: $base-green;
+}
+
+.background {
+	position: absolute;
+	z-index: -1;
+}
+
+.button_empty {
+	padding: 15px 40px;
+	border: 1px solid $base-green;
+	color: $base-green;
+	transition: all .2s;
+	background-color: transparent;
+	cursor: pointer;
+}
+.button_empty:hover {
+	background-color: $base-green;
+	color: $base-white;
+}
+
+.button_filled {
+	padding: 20px 40px;
+	border: none;
+	color: $base-white;
+	transition: all .2s;
+	background-color: $base-green;
+	cursor: pointer;
+}
+.button_filled:hover {
+	background-color: $base-darkgreen;
+}
+
+.uppercase {
+	font-family: $ff-sans-regular;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.price {
+    font-family: "NotoSerifDisplay-LightItalic";
+    font-size: 24px;
+    color: #53613D;
+}
+
+.regular {
+	font-family: $ff-sans-regular;
+	font-size: $fs-base - 2px;
+}
+
+.italic {
+	font-family: $ff-serif-bold;
+	font-size: $fs-h4;
+}
+
+.center {
+	text-align: center;
+}
+
+.list {
+	font-size: $fs-base;
+	list-style: none;
+	line-height: 1.8;
+}
+
+.list .list-item::before {
+	color: $base-green;
+	content: "\2022";
+	font-weight: 600;
+	display: inline-block;
+	width: 1em;
+	margin-left: -2em;
+}
+
+.line {
+	width: 76px;
+	height: 1px;
+	background-color: $base-black;
+	align-self: center;
+}
+
+.offer-name {
+	font-family: $ff-sans-bold;
+	font-size: $fs-base;
+	text-transform: uppercase;
+	color: $base-green;
+}
+
+.list-non-styled {
+    list-style: none;
+}
+
+.list-non-styled:first-child {
+	padding: 0;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.vertical-line {
+    width: 1px;
+    background-color: #000000;
+}
+
+.input {
+	width: 100%;
+}

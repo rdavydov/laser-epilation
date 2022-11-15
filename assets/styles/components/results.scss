@@ -1,0 +1,23 @@
+@import "../utils/_vars";
+@import "./global.scss";
+
+// results
+.result {
+	padding: 64px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.italic.result_italic {
+	margin-bottom: 20px;
+}
+
+.uppercase.result_uppercase {
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+
+.button_filled.result_button {
+	margin-top: 40px;
+}

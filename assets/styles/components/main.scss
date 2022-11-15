@@ -1,0 +1,33 @@
+@import "./global.scss";
+
+// main
+.main {
+	position: relative;
+	margin-bottom: 196px;
+}
+
+.text {
+	order: 1;
+	padding-top: 5%;
+}
+
+.background.main_background {
+	order: 2;
+}
+
+.italic.main_italic {
+	margin-bottom: 30px;
+}
+
+.list.main_list {
+	margin-bottom: 15px;
+}
+
+.sale.main_block {
+	display: flex;
+	align-items: center;
+}
+
+.button_filled.main_button {
+	margin-right: 50px;
+}

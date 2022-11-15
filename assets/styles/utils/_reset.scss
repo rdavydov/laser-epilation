@@ -1,0 +1,30 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+	margin: 0;
+	font-weight: 400;
+	color: #333333;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}

@@ -1,0 +1,65 @@
+@import "../utils/_vars";
+@import "./global.scss";
+
+// tariff
+.tariff {
+	padding: 64px 20px;
+}
+
+.tariff-list {
+	display: flex;
+	margin-bottom: 50px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    cursor: grab;
+    gap: 30px;
+}
+
+.tariff-list::-webkit-scrollbar {
+    display: none;
+}
+
+.tariff-item {
+	width: 340px;
+	padding: 40px;
+	margin-right: 30px;
+	border: 1px solid rgb(111,123,92);
+	border-radius: 50%;
+	background-color: #F9F6F3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tariff-item:last-child {
+    height: 400px;
+    margin-right: 0;
+}
+
+.tariff-bottom {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100%;
+}
+
+.tariff_line {
+	margin: 13px 0;
+}
+
+.tariff_button__wrap {
+	display: flex;
+	justify-content: center;
+}
+
+.italic.tariff_italic {
+	margin-bottom: 25px;
+}
+
+.regular.tariff_regular {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	font-size: $fs-base;
+}

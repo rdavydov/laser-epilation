@@ -1,0 +1,68 @@
+@import "../utils/_vars";
+@import "./global.scss";
+
+// header
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100px;
+	padding-top: 15px;
+	margin-bottom: 87px;
+}
+
+.header_block {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.uppercase.header_address {
+	font-size: $fs-base;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.logo.header_logo {
+	width: 81px;
+	height: 65px;
+	padding: 5px;
+}
+
+// contacts
+.phone {
+	display: inline-flex;
+	align-items: center;
+	letter-spacing: 3px;
+	font-family: $ff-sans-semibold;
+	font-size: 14px;
+}
+
+.icon.header-icon__phone {
+	width: 18px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+// reception
+.reception.header_block {
+	align-items: center;
+}
+
+.uppercase.link {
+	text-decoration: underline 1px rgba(0, 0, 0, 0);
+	text-underline-offset: 4px;
+  	transition: text-decoration-color .3s;
+}
+.uppercase.link:hover {
+	text-decoration-color: rgba(83, 98, 61, 1);
+}
+
+.link.header_link {
+	margin-top: 17px;
+}

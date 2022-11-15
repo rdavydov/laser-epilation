@@ -1,0 +1,44 @@
+@import "../utils/_vars";
+@import "./global.scss";
+
+// qna
+.qna {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 64px 20px;
+}
+
+.qna_accordion {
+	width: 93vw;
+}
+
+.qna_accordion-item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0;
+}
+
+.qna_accordion-button {
+	padding: 20px 0;
+	border-bottom: 1px solid #DEDEDE;
+}
+
+.bold.qna_bold {
+	font-size: 18px;
+	color: $base-green;
+}
+
+.bubble.qna_bubble {
+	padding: 8px;
+}
+
+.plus {
+	width: 14px;
+	height: 14px;
+	transition: transform .1s;
+}
+
+.plus.active {
+	transform: rotate(45deg);
+}

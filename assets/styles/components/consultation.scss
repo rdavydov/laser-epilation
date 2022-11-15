@@ -1,0 +1,39 @@
+@import "../utils/_vars";
+@import "./global.scss";
+
+// consultation
+.consultation {
+	width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background: url(../images/bart-zimny.jpg) no-repeat;
+    background-size: cover;
+    padding: 4rem 0;
+}
+
+.consultation-inner {
+	display: flex;
+	background-color: $base-white;
+}
+
+.left {
+	padding: 95px 70px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.italic.consultation_italic {
+	margin-bottom: 30px;
+}
+
+.uppercase.consultation_uppercase {
+	margin-top: 30px;
+	margin-bottom: 75px;
+}
+
+.button_empty.consultation_button-empty {
+	padding: 19px 39px;
+	margin-left: 15px;
+}

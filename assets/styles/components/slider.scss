@@ -1,0 +1,86 @@
+@import "../utils/_vars";
+@import "./global.scss";
+
+// slider 
+.slider {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 90vw;
+}
+
+.slider-inner {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.slider-container {
+	overflow: hidden;
+	display: flex;
+}
+
+.slider-track {
+	display: flex;
+	width: 560px;
+	transition: all .3s;
+}
+
+.slider-item {
+	min-width: 560px;
+	display: flex;
+	align-items: center;
+}
+
+.slider-prev,
+.slider-next {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	background-color: transparent;
+	border: none;
+	z-index: 3;
+}
+
+.slider-prev:disabled > .bubble > img,
+.slider-next:disabled > .bubble > img {
+	filter: invert(100%) sepia(33%) saturate(417%) hue-rotate(41deg) brightness(97%) contrast(91%);
+}
+
+.slider-prev:disabled > .bubble,
+.slider-next:disabled > .bubble {
+	background-color: $base-white;
+	border: 1px solid $base-green;
+}
+
+.slider-indicator {
+	margin-top: 30px;
+	display: flex;
+}
+
+.slider-indicator-item {
+	width: 8px;
+	height: 8px;
+	background-color: #D1CECA;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.slider-indicator-item:last-child {
+	margin-bottom: 0;
+}
+
+.slider-indicator-item.active {
+	background-color: $base-green;
+}
+
+.arrow.slider_arrow__prev {
+	transform: rotate(90deg);	
+	padding-top: 2px;
+}
+
+.arrow.slider_arrow__next {
+	transform: rotate(270deg);
+	padding-top: 2px;
+}
