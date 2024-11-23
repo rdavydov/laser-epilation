@@ -1,134 +1,134 @@
 @import "../utils/_vars";
 
 body {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	font-family: $ff-sans-regular;
-	overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: $ff-sans-regular;
+  overflow-x: hidden;
 }
 
 .wrapper {
-	max-width: $max-w;
-	padding: 0 20px;
-	width: 100%;
-	z-index: 1;
+  max-width: $max-w;
+  padding: 0 20px;
+  width: 100%;
+  z-index: 1;
 }
 
 .background.half {
-	top: 0;
-	right: 0;
-	width: 50%;
+  top: 0;
+  right: 0;
+  width: 50%;
 }
 
 .icon {
-	color: $base-green;
+  color: $base-pink;
 }
 
 .background {
-	position: absolute;
-	z-index: -1;
+  position: absolute;
+  z-index: -1;
 }
 
 .button_empty {
-	padding: 15px 40px;
-	border: 1px solid $base-green;
-	color: $base-green;
-	transition: all .2s;
-	background-color: transparent;
-	cursor: pointer;
+  padding: 15px 40px;
+  border: 1px solid $base-pink;
+  color: $base-pink;
+  transition: all 0.2s;
+  background-color: transparent;
+  cursor: pointer;
 }
 .button_empty:hover {
-	background-color: $base-green;
-	color: $base-white;
+  background-color: $base-pink;
+  color: $base-white;
 }
 
 .button_filled {
-	padding: 20px 40px;
-	border: none;
-	color: $base-white;
-	transition: all .2s;
-	background-color: $base-green;
-	cursor: pointer;
+  padding: 20px 40px;
+  border: none;
+  color: $base-white;
+  transition: all 0.2s;
+  background-color: $base-pink;
+  cursor: pointer;
 }
 .button_filled:hover {
-	background-color: $base-darkgreen;
+  background-color: $base-darkpink;
 }
 
 .uppercase {
-	font-family: $ff-sans-regular;
-	font-size: 12px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+  font-family: $ff-sans-regular;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .price {
-    font-family: "NotoSerifDisplay-LightItalic";
-    font-size: 24px;
-    color: #ec88b8;
+  font-family: "NotoSerifDisplay-LightItalic";
+  font-size: 24px;
+  color: #ec88b8;
 }
 
 .regular {
-	font-family: $ff-sans-regular;
-	font-size: $fs-base - 2px;
+  font-family: $ff-sans-regular;
+  font-size: $fs-base - 2px;
 }
 
 .italic {
-	font-family: $ff-serif-bold;
-	font-size: $fs-h4;
+  font-family: $ff-serif-bold;
+  font-size: $fs-h4;
 }
 
 .center {
-	text-align: center;
+  text-align: center;
 }
 
 .list {
-	font-size: $fs-base;
-	list-style: none;
-	line-height: 1.8;
+  font-size: $fs-base;
+  list-style: none;
+  line-height: 1.8;
 }
 
 .list .list-item::before {
-	color: $base-green;
-	content: "\2022";
-	font-weight: 600;
-	display: inline-block;
-	width: 1em;
-	margin-left: -2em;
+  color: $base-pink;
+  content: "\2022";
+  font-weight: 600;
+  display: inline-block;
+  width: 1em;
+  margin-left: -2em;
 }
 
 .line {
-	width: 76px;
-	height: 1px;
-	background-color: $base-black;
-	align-self: center;
+  width: 76px;
+  height: 1px;
+  background-color: $base-black;
+  align-self: center;
 }
 
 .offer-name {
-	font-family: $ff-sans-bold;
-	font-size: $fs-base;
-	text-transform: uppercase;
-	color: $base-green;
+  font-family: $ff-sans-bold;
+  font-size: $fs-base;
+  text-transform: uppercase;
+  color: $base-pink;
 }
 
 .list-non-styled {
-    list-style: none;
+  list-style: none;
 }
 
 .list-non-styled:first-child {
-	padding: 0;
+  padding: 0;
 }
 
 .bold {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .vertical-line {
-    width: 1px;
-    background-color: #000000;
+  width: 1px;
+  background-color: #000000;
 }
 
 .input {
-	width: 100%;
+  width: 100%;
 }

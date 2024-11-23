@@ -1,266 +1,266 @@
 @import "./_vars.scss";
 
 @media (max-width: 425px) {
+  .wrapper {
+    max-width: 425px;
+  }
 
-    .wrapper {
-        max-width: 425px;
-    }
+  // header
+  .header {
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 20px;
+  }
 
-    // header
-    .header {
-        justify-content: center;
-        flex-direction: column;
-        height: auto;
-        margin-bottom: 20px;
-    }
+  .logo.header_block {
+    order: 1;
+    margin-bottom: 20px;
+  }
 
-    .logo.header_block {
-        order: 1;
-        margin-bottom: 20px;
-    }
+  .logo.header_block > p {
+    font-size: 10px;
+    font-weight: 600;
+  }
 
-    .logo.header_block > p {
-        font-size: 10px;
-        font-weight: 600;
-    }
+  .uppercase.header_address {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
 
-    .uppercase.header_address {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
+  .logo.header_logo {
+    width: 61px;
+    height: 50px;
+  }
 
-    .logo.header_logo {
-        width: 61px;
-        height: 50px;
-    }
+  .contacts.header_block {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .contacts.header_block {
-        order: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .reception.header_block {
+    display: none;
+  }
 
-    .reception.header_block {
-        display: none;
-    }
+  .italic {
+    font-size: 28px;
+  }
 
-    .italic {
-        font-size: 28px;
-    }
+  .background.half.main_background {
+    width: 60%;
+    left: 30%;
+  }
 
-    .background.half.main_background {
-        width: 60%;
-        left: 30%;
-    }
+  .phone,
+  .uppercase {
+    font-size: 14px;
+  }
 
-    .phone, .uppercase {
-        font-size: 14px;
-    }
+  .image-wrap {
+    display: none;
+  }
 
-    .image-wrap {
-        display: none;
-    }
+  .benefits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .benefits-list {
-        grid-template-columns: repeat(2, 1fr)
-    }
+  .sale.main_block {
+    flex-direction: column-reverse;
+  }
 
-    .sale.main_block {
-        flex-direction: column-reverse;
-    }
+  .button_filled.main_button {
+    margin: auto;
+  }
 
-    .button_filled.main_button {
-        margin: auto;
-    }
+  .main {
+    padding: 0 40px;
+  }
 
-    .main {
-        padding: 0 40px;
-    }
+  .offer-name.complex_offer-name {
+    font-size: 16px;
+  }
 
-    .offer-name.complex_offer-name {
-        font-size: 16px;
-    }
+  .price.complex_price {
+    font-size: 19px;
+  }
 
-    .price.complex_price {
-        font-size: 19px;
-    }
+  .complex_button__wrap {
+    align-items: center;
+    justify-content: center;
+  }
 
-    .complex_button__wrap {
-        align-items: center;
-        justify-content: center;
-    }
+  .regular.complex_regular__size {
+    font-size: 16px;
+  }
 
-    .regular.complex_regular__size {
-        font-size: 16px;
-    }
+  .regular {
+    font-size: 12px;
+  }
 
-    .regular {
-        font-size: 12px;
-    }
+  .accordion {
+    align-items: center;
+  }
 
-    .accordion {
-        align-items: center;
-    }
+  .accordion-content {
+    margin: 0;
+    flex-direction: column;
+  }
 
-    .accordion-content {
-        margin: 0;
-        flex-direction: column;
-    }
+  .list-non-styled {
+    padding: 0 20px !important;
+  }
 
-    .list-non-styled {
-        padding: 0 20px!important;
-    }
+  .accordion-item {
+    max-width: 290px;
+  }
 
-    .accordion-item {
-        max-width: 290px;
-    }
+  .accordion-button {
+    flex-direction: column;
+    height: auto;
+  }
 
-    .accordion-button {
-        flex-direction: column;
-        height: auto;
-    }
+  .card {
+    padding: 15px 0;
+    width: 50%;
+  }
 
-    .card {
-        padding: 15px 0;
-        width: 50%;
-    }
+  .cardless {
+    padding: 15px 0;
+    width: 50%;
+  }
 
-    .cardless {
-        padding: 15px 0;
-        width: 50%;
-    }
+  .line-group {
+    display: none;
+  }
 
-    .line-group {
-        display: none;
-    }
+  .accordion-button > div:first-child {
+    flex-direction: row-reverse;
+    padding: 36px 0;
+    width: 100%;
+    justify-content: center;
+    border-bottom: 1px solid $base-pink;
+  }
 
-    .accordion-button > div:first-child {
-        flex-direction: row-reverse;
-        padding: 36px 0;
-        width: 100%;
-        justify-content: center;
-        border-bottom: 1px solid $base-green;
-    }
+  .bubble.accordion_bubble {
+    margin-right: 0;
+    margin-left: 15px;
+  }
 
-    .bubble.accordion_bubble {
-        margin-right: 0;
-        margin-left: 15px;
-    }
+  .club-inner {
+    width: 290px;
+    padding: 30px 20px;
+  }
 
-    .club-inner {
-        width: 290px;
-        padding: 30px 20px;
-    }
+  .soprano {
+    display: grid;
+    grid-template-areas:
+      "pluses1 pluses2"
+      "image image";
+    grid-gap: 40px;
+    align-items: start;
+    width: 80%;
+  }
 
-    .soprano {
-        display: grid;
-        grid-template-areas:
-                    'pluses1 pluses2'
-                    'image image';
-        grid-gap: 40px;
-        align-items: start;
-        width: 80%;
-    }
+  .soprano-pluses {
+    order: 1;
+    display: grid;
+    grid-row-gap: 20px;
+  }
 
-    .soprano-pluses {
-        order: 1;
-        display: grid;
-        grid-row-gap: 20px;
-    }
+  .soprano-pluses:first-child {
+    margin-left: 0;
+    margin-right: 0;
+    grid-area: pluses1;
+  }
 
-    .soprano-pluses:first-child {
-        margin-left: 0;
-        margin-right: 0;
-        grid-area: pluses1;
-    }
+  .soprano-pluses:last-child {
+    margin-left: 0;
+    margin-right: 0;
+    grid-area: pluses2;
+  }
 
-    .soprano-pluses:last-child {
-        margin-left: 0;
-        margin-right: 0;
-        grid-area: pluses2;
-    }
+  .soprano-image {
+    order: 3;
+    grid-area: image;
+    justify-self: center;
+  }
 
-    .soprano-image {
-        order: 3;
-        grid-area: image;
-        justify-self: center;
-    }
+  .soprano-pluses:nth-child(2) {
+    order: 2;
+  }
 
-    .soprano-pluses:nth-child(2) {
-        order: 2;
-    }
+  .soprano-item {
+    display: grid;
+    justify-self: flex-start;
+    margin-bottom: 0;
+  }
 
-    .soprano-item {
-        display: grid;
-        justify-self: flex-start;
-        margin-bottom: 0;
-    }
+  .icon.apparatus_icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 
-    .icon.apparatus_icon {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
+  .accordion-button.qna_accordion-button {
+    flex-direction: row;
+  }
 
-    .accordion-button.qna_accordion-button {
-        flex-direction: row;
-    }
+  .bold.qna_bold {
+    font-size: 15px;
+    width: 80%;
+  }
 
-    .bold.qna_bold {
-        font-size: 15px;
-        width: 80%;
-    }
+  .right {
+    display: none;
+  }
 
-    .right {
-        display: none;
-    }
+  .button_empty,
+  .button_filled,
+  .button_empty.consultation_button-empty {
+    padding: 15px 20px;
+  }
 
-    .button_empty,
-    .button_filled,
-    .button_empty.consultation_button-empty {
-        padding: 15px 20px;
-    }
+  .footer-inner {
+    flex-direction: column;
+    padding: 64px 20px 0 20px;
+  }
 
-    .footer-inner {
-        flex-direction: column;
-        padding: 64px 20px 0 20px;
-    }
+  .left.footer_left {
+    width: 90%;
+  }
 
-    .left.footer_left {
-        width: 90%;
-    }
+  .right.footer_right {
+    width: 100%;
+  }
 
-    .right.footer_right {
-        width: 100%;
-    }
+  .tariff-list {
+    overflow: visible;
+  }
 
-    .tariff-list {
-        overflow: visible;
-    }
+  .accordion-button > div:last-child {
+    width: 100%;
+  }
 
-    .accordion-button > div:last-child {
-        width: 100%;
-    }
-
-    .soprano-image > img {
-        margin: auto;
-    }
+  .soprano-image > img {
+    margin: auto;
+  }
 }
 
 @media (max-width: 350px) {
-    .italic {
-        font-size: 20px;
-    }
+  .italic {
+    font-size: 20px;
+  }
 
-    .uppercase {
-        font-size: 12px!important;
-    }
+  .uppercase {
+    font-size: 12px !important;
+  }
 
-    .list {
-        font-size: 12px;
-    }
+  .list {
+    font-size: 12px;
+  }
 
-    .tariff-item {
-        width: 100%;
-    }
+  .tariff-item {
+    width: 100%;
+  }
 }

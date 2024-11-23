@@ -4,24 +4,25 @@ $min-w: 320px;
 
 // шрифты
 @font-face {
-	font-family: "NotoSansDisplay-Bold";  
-	src: url("../../assets/fonts/NotoSansDisplay-Bold.ttf") format("truetype");
+  font-family: "NotoSansDisplay-Bold";
+  src: url("../../assets/fonts/NotoSansDisplay-Bold.ttf") format("truetype");
 }
 @font-face {
-	font-family: "NotoSansDisplay-SemiBold";  
-	src: url("../../assets/fonts/NotoSansDisplay-SemiBold.ttf") format("truetype");
+  font-family: "NotoSansDisplay-SemiBold";
+  src: url("../../assets/fonts/NotoSansDisplay-SemiBold.ttf") format("truetype");
 }
 @font-face {
-	font-family: "NotoSansDisplay-Regular";  
-	src: url("../../assets/fonts/NotoSansDisplay-Regular.ttf") format("truetype");
+  font-family: "NotoSansDisplay-Regular";
+  src: url("../../assets/fonts/NotoSansDisplay-Regular.ttf") format("truetype");
 }
 @font-face {
-	font-family: "NotoSerifDisplay-Bold";  
-	src: url("../../assets/fonts/NotoSerifDisplay-Bold.ttf") format("truetype");
+  font-family: "NotoSerifDisplay-Bold";
+  src: url("../../assets/fonts/NotoSerifDisplay-Bold.ttf") format("truetype");
 }
 @font-face {
-	font-family: "NotoSerifDisplay-LightItalic";  
-	src: url("../../assets/fonts/NotoSerifDisplay-LightItalic.ttf") format("truetype");
+  font-family: "NotoSerifDisplay-LightItalic";
+  src: url("../../assets/fonts/NotoSerifDisplay-LightItalic.ttf")
+    format("truetype");
 }
 
 $ff-sans-bold: "NotoSansDisplay-Bold";
@@ -29,7 +30,7 @@ $ff-sans-semibold: "NotoSansDisplay-SemiBold";
 $ff-sans-regular: "NotoSansDisplay-Regular";
 $ff-serif-bold: "NotoSerifDisplay-Bold";
 $ff-serif-lightitalic: "NotoSerifDisplay-LightItalic";
- 
+
 $fs-base: 16px;
 
 $fs-btn: $fs-base;
@@ -59,11 +60,11 @@ $fs-m-h3: 34px;
 $fs-m-h2: 38px;
 $fs-m-h1: 46px;
 
-
 // цвета
-$base-green: #53613D;
-$base-darkgreen: #3F492E;
+$base-green: #53613d;
+$base-darkgreen: #3f492e;
 $base-grey: #333333;
-$base-pink: #FAF5F1;
-$base-white: #FFFFFF;
+$base-pink: #ec88b8;
+$base-darkpink: #c56292;
+$base-white: #ffffff;
 $base-black: #000000;

@@ -4,133 +4,134 @@
 // accordion
 
 .accordion {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .accordion-item {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	margin-bottom: 20px;
-	position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .accordion-background {
-	background-color: #FAF6F3;
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	z-index: -1;
+  background-color: #faf6f3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .accordion-item:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .accordion-item.active > .accordion-content {
-	padding: 20px 0 20px 0;
-	max-height: 1000px;
+  padding: 20px 0 20px 0;
+  max-height: 1000px;
 }
 
 .accordion-item.active > .accordion-button > div > .bubble > .arrow {
-	transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .accordion-content {
-	padding: 0;
-	margin-left: 90px;
-	transform: scale(1);
-	max-height: 0;
-	overflow: hidden;
-	transition: all .2s;
-	display: flex;
+  padding: 0;
+  margin-left: 90px;
+  transform: scale(1);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s;
+  display: flex;
 }
 
 .accordion-button {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 130px;
-	cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 130px;
+  cursor: pointer;
 }
 
 .accordion-button > div {
-	display: flex;
-	align-items: center;
-	height: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .accordion-button > div:first-child {
-	padding: 35px 30px;
+  padding: 35px 30px;
 }
 
 .line-group {
-	display: flex;
+  display: flex;
 }
 
 .accordion-item.active > .line-group > .line-green {
-	opacity: 1;
-	width: 91.5%;
+  opacity: 1;
+  width: 91.5%;
 }
 
 .line-biege {
-	width: 8.5%;
-	height: 1px;
+  width: 8.5%;
+  height: 1px;
 }
 
 .line-green {
-	width: 0;
-	height: 1px;
-	opacity: 0;
-	transition: width .4s ease-in-out, opacity .4s ease-in-out;
-	background-color: $base-green;
+  width: 0;
+  height: 1px;
+  opacity: 0;
+  transition: width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  background-color: $base-pink;
 }
 
-.cardless, .card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-	padding: 0 60px;
+.cardless,
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 60px;
 }
 
 .card {
-	background-color: $base-green;
+  background-color: $base-pink;
 }
 
 .bubble {
-	background-color: $base-green;
-	padding: 8px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	transition: background-color .3s, border-color .3s;
+  background-color: $base-pink;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 .bubble.accordion_bubble {
-	margin-right: 30px;
+  margin-right: 30px;
 }
 
 .arrow {
-	width: 12px;
-	height: 12px;
-	transition: transform .2s;
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s;
 }
 
 .regular.accordion_regular {
-	font-size: $fs-base - 4;
+  font-size: $fs-base - 4;
 }
 
 .regular.accordion_regular.accordion_regular__color {
-	color: $base-white;	
+  color: $base-white;
 }
 
 .price.accordion_price {
-	color: $base-white;
+  color: $base-white;
 }
