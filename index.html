@@ -1,141 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Салон лазерной эпиляции</title>
 
-    <!--  Swiper.js  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+	<!--  Swiper.js  -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
-    <style>
-        .result {
-            padding: 64px 0!important;
-        }
+	<style>
+		.result {
+			padding: 64px 0 !important;
+		}
 
-        .swiper {
-            width: 96vw;
-            min-height: 300px;
-            -webkit-touch-callout: none; /* iOS Safari */
-		    -webkit-user-select: none; /* Safari */
-		     -khtml-user-select: none; /* Konqueror HTML */
-		       -moz-user-select: none; /* Old versions of Firefox */
-		        -ms-user-select: none; /* Internet Explorer/Edge */
-		            user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-        }
+		.swiper {
+			width: 96vw;
+			min-height: 300px;
+			-webkit-touch-callout: none;
+			/* iOS Safari */
+			-webkit-user-select: none;
+			/* Safari */
+			-khtml-user-select: none;
+			/* Konqueror HTML */
+			-moz-user-select: none;
+			/* Old versions of Firefox */
+			-ms-user-select: none;
+			/* Internet Explorer/Edge */
+			user-select: none;
+			/* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+		}
 
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+		.swiper-slide {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
-        .swiper2 {
-            position: relative;
-            display: flex;
-    		align-items: center;
-        }
+		.swiper2 {
+			position: relative;
+			display: flex;
+			align-items: center;
+		}
 
-        .swiper1 > .swiper-wrapper > .swiper-slide > .image.slider_image {
-        	margin-right: 30px	;
-        }
+		.swiper1>.swiper-wrapper>.swiper-slide>.image.slider_image {
+			margin-right: 30px;
+		}
 
-        .swiper-opacity-left {
-        	opacity: .50;
-        	background-color: #fff;
-        	position: absolute;
-        	top: 0;
-        	left: 0;
-        	bottom: 0;
-        	z-index: 4;
-        }
+		.swiper-opacity-left {
+			opacity: .50;
+			background-color: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			z-index: 4;
+		}
 
-        .swiper-opacity-right {
-        	opacity: .50;
-        	background-color: #fff;
-        	position: absolute;
-        	top: 0;
-        	right: 0;
-        	bottom: 0;
-        	z-index: 4;
-        }
+		.swiper-opacity-right {
+			opacity: .50;
+			background-color: #fff;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 4;
+		}
 
-        .swiper-button-next:after, .swiper-button-prev:after {
-            display: none;
-        }
+		.swiper-button-next:after,
+		.swiper-button-prev:after {
+			display: none;
+		}
 
-        .swiper-button-next.bubble,
-        .swiper-button-prev.bubble {
-            width: 35px;
-            height: 35px;
-        }
+		.swiper-button-next.bubble,
+		.swiper-button-prev.bubble {
+			width: 35px;
+			height: 35px;
+		}
 
-        .swiper-button-next, .swiper-rtl .swiper-button-prev {
-            right: 35px;
-        }
+		.swiper-button-next,
+		.swiper-rtl .swiper-button-prev {
+			right: 35px;
+		}
 
-        .swiper-button-prev, .swiper-rtl .swiper-button-next {
-            left: 40px;
-        }
+		.swiper-button-prev,
+		.swiper-rtl .swiper-button-next {
+			left: 40px;
+		}
 
-        .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
-        	border: 1px solid #af5f97;
-        	background-color: #fff;
-        	opacity: 1;
-        }
+		.swiper-button-next.swiper-button-disabled,
+		.swiper-button-prev.swiper-button-disabled {
+			border: 1px solid #af5f97;
+			background-color: #fff;
+			opacity: 1;
+		}
 
-        .swiper-button-next.swiper-button-disabled > img,
-        .swiper-button-prev.swiper-button-disabled > img {
-        	filter: invert(100%) sepia(7%) saturate(2421%) hue-rotate(41deg) brightness(93%) contrast(79%);
-        }
+		.swiper-button-next.swiper-button-disabled>img,
+		.swiper-button-prev.swiper-button-disabled>img {
+			filter: invert(100%) sepia(7%) saturate(2421%) hue-rotate(41deg) brightness(93%) contrast(79%);
+		}
 
-        .swiper-pagination {
-            position: static;
-            padding-top: 20px;
-        }
+		.swiper-pagination {
+			position: static;
+			padding-top: 20px;
+		}
 
-        .swiper-pagination-bullet-active {
-            background-color: #af5f97;
-        }
+		.swiper-pagination-bullet-active {
+			background-color: #af5f97;
+		}
 
-        @media (max-width: 768px) {
-            .swiper-slide {
-                flex-direction: column;
-            }
+		@media (max-width: 768px) {
+			.swiper-slide {
+				flex-direction: column;
+			}
 
-            .swiper1 > .swiper-wrapper > .swiper-slide > .image.slider_image {
-                margin-right: 0!important;
-                margin-bottom: 30px;
-            }
+			.swiper1>.swiper-wrapper>.swiper-slide>.image.slider_image {
+				margin-right: 0 !important;
+				margin-bottom: 30px;
+			}
 
-            .swiper-button-next, .swiper-rtl .swiper-button-prev {
-                right: 15%;
-            }
+			.swiper-button-next,
+			.swiper-rtl .swiper-button-prev {
+				right: 15%;
+			}
 
-            .swiper-button-prev, .swiper-rtl .swiper-button-next {
-                left: 15%;
-            }
+			.swiper-button-prev,
+			.swiper-rtl .swiper-button-next {
+				left: 15%;
+			}
 
-            .image {
-                width: 50%;
-            }
-        }
+			.image {
+				width: 50%;
+			}
+		}
 
-        @media (max-width: 565px) {
-            .swiper-button-next, .swiper-rtl .swiper-button-prev {
-                right: 10%;
-            }
+		@media (max-width: 565px) {
 
-            .swiper-button-prev, .swiper-rtl .swiper-button-next {
-                left: 10%;
-            }
-        }
-    </style>
+			.swiper-button-next,
+			.swiper-rtl .swiper-button-prev {
+				right: 10%;
+			}
 
-    <!--  Styles  -->
+			.swiper-button-prev,
+			.swiper-rtl .swiper-button-next {
+				left: 10%;
+			}
+		}
+	</style>
+
+	<!--  Styles  -->
 	<link rel="stylesheet" href="assets/styles/output.css">
 	<link rel="stylesheet" href="assets/styles/output.css.map">
 </head>
+
 <body>
 
 	<div class="modal" style="display: none;">
@@ -158,8 +175,8 @@
 					</button>
 					<div class="politicy">
 						<label class="checkbox-wrap modal_checkbox-wrap">
-						  <input type="checkbox" checked="checked">
-						  <span class="checkmark"></span>
+							<input type="checkbox" checked="checked">
+							<span class="checkmark"></span>
 						</label>
 						<div>
 							<span style="width: 180px">Я согласен с <span class="dotted">политикой конфидециальности</span>
@@ -186,7 +203,12 @@
 					ул. Кошевого, 27
 				</p>
 				<p class="phone">
-					<svg class="icon header-icon__phone" enable-background="new 0 0 25.625 25.625" version="1.1" viewBox="0 0 25.625 25.625" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m22.079 17.835c-1.548-1.324-3.119-2.126-4.648-0.804l-0.913 0.799c-0.668 0.58-1.91 3.29-6.712-2.234-4.801-5.517-1.944-6.376-1.275-6.951l0.918-0.8c1.521-1.325 0.947-2.993-0.15-4.71l-0.662-1.04c-1.102-1.713-2.302-2.838-3.827-1.515l-0.824 0.72c-0.674 0.491-2.558 2.087-3.015 5.119-0.55 3.638 1.185 7.804 5.16 12.375 3.97 4.573 7.857 6.87 11.539 6.83 3.06-0.033 4.908-1.675 5.486-2.272l0.827-0.721c1.521-1.322 0.576-2.668-0.973-3.995l-0.931-0.801z" fill="#53623D"/></svg>
+					<svg class="icon header-icon__phone" enable-background="new 0 0 25.625 25.625" version="1.1"
+						viewBox="0 0 25.625 25.625" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="m22.079 17.835c-1.548-1.324-3.119-2.126-4.648-0.804l-0.913 0.799c-0.668 0.58-1.91 3.29-6.712-2.234-4.801-5.517-1.944-6.376-1.275-6.951l0.918-0.8c1.521-1.325 0.947-2.993-0.15-4.71l-0.662-1.04c-1.102-1.713-2.302-2.838-3.827-1.515l-0.824 0.72c-0.674 0.491-2.558 2.087-3.015 5.119-0.55 3.638 1.185 7.804 5.16 12.375 3.97 4.573 7.857 6.87 11.539 6.83 3.06-0.033 4.908-1.675 5.486-2.272l0.827-0.721c1.521-1.322 0.576-2.668-0.973-3.995l-0.931-0.801z"
+							fill="#53623D" />
+					</svg>
 					+7 908 177-66-05
 				</p>
 			</div>
@@ -202,17 +224,17 @@
 
 		<section class="main">
 			<div class="background half main_background">
-    			<img class="background_image" src="assets/images/lingerie-nude.jpg" alt="background">
+				<img class="background_image" src="assets/images/lingerie-nude.jpg" alt="background">
 			</div>
 
 			<div class="text">
 				<h1 class="italic main_italic">
 					Гладкая красивая кожа
 					<br>
-                    в профессиональном центре
-                    <br>
-                    лазерной эпиляции
-				</h1> 
+					в профессиональном центре
+					<br>
+					лазерной эпиляции
+				</h1>
 				<ul class="list main_list">
 					<li class="list-item">Лучший аппарат с гибридным лучом</li>
 					<li class="list-item">Медицинская лицензия</li>
@@ -255,7 +277,7 @@
 					<p class="regular benefits_regular">
 						Постоянное повышение квалификации
 					</p>
-				</div>				
+				</div>
 				<div class="benefits-item">
 					<img class="icon benefits_icon" src="assets/icons/002-ruble.svg" alt="icon">
 					<p class="regular benefits_regular">
@@ -287,7 +309,7 @@
 			</h1>
 			<div class="line"></div>
 			<h2 class="uppercase center complex_uppercase">
-				Будет повод обновить гардероб платьем и показывать 
+				Будет повод обновить гардероб платьем и показывать
 				<br>
 				красивые гладкие ноги
 			</h2>
@@ -298,7 +320,7 @@
 				<div class="complex-list">
 					<div class="complex-item">
 						<h3 class="offer-name complex_offer-name">
-							комплекс «Тело» 
+							комплекс «Тело»
 							<br>
 							1-й сеанс
 						</h3>
@@ -337,7 +359,7 @@
 					<div class="complex_button__wrap">
 						<button class="button_filled uppercase complex_button_filled">
 							Получить спеццену
-						</button>						
+						</button>
 					</div>
 				</div>
 			</div>
@@ -345,13 +367,13 @@
 	</section>
 
 	<div class="wrapper">
-		
+
 		<section class="tariff">
 			<h1 class="italic center tariff_italic">выгодные предложения</h1>
 			<div class="tariff-list">
 				<div class="tariff-item">
 					<h3 class="offer-name center">
-						Все тело 
+						Все тело
 						<br>
 						«STANDART»
 					</h3>
@@ -429,7 +451,7 @@
 					</h3>
 					<p class="regular center tariff_regular">
 						Любые зоны, без ограничения, исключая зоны лица
-					</p>	
+					</p>
 					<div class="tariff-bottom">
 						<p class="price">
 							4 500 ₽
@@ -530,7 +552,7 @@
 							<li class="list-non-styled-item">Ореолы сосков</li>
 							<li class="list-non-styled-item">Белая линия живота</li>
 						</ul>
-						
+
 						<ul class="list-non-styled">
 							<li class="list-non-styled-item bold" style="margin-bottom: 10px;">
 								Бикини
@@ -618,7 +640,7 @@
 							<li class="list-non-styled-item">Ореолы сосков</li>
 							<li class="list-non-styled-item">Белая линия живота</li>
 						</ul>
-						
+
 						<ul class="list-non-styled">
 							<li class="list-non-styled-item bold" style="margin-bottom: 10px;">
 								Бикини
@@ -706,7 +728,7 @@
 							<li class="list-non-styled-item">Ореолы сосков</li>
 							<li class="list-non-styled-item">Белая линия живота</li>
 						</ul>
-						
+
 						<ul class="list-non-styled">
 							<li class="list-non-styled-item bold" style="margin-bottom: 10px;">
 								Бикини
@@ -724,7 +746,7 @@
 						</ul>
 					</div>
 				</div>
-			</div>		
+			</div>
 		</section>
 
 	</div>
@@ -764,7 +786,7 @@
 
 	<section class="apparatus">
 		<h1 class="italic center club_italic">
-			Почему мы любим лазерную эпиляцию 
+			Почему мы любим лазерную эпиляцию
 			<br>
 			Soprano Ice Platinum
 		</h1>
@@ -843,29 +865,29 @@
 			Гладкость в любое время, никакой щетины, ровный цвет кожи. Хочешь так же?
 		</h3>
 		<div class="swiper swiper1">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide result_slider-item">
-                    <img class="image slider_image" src="assets/images/dirty.png" alt="dirty">
-                    <img class="image" src="assets/images/clear.png" alt="clear">
-                </div>
-                <div class="swiper-slide result_slider-item">
-                    <img class="image slider_image" src="assets/images/dirty.png" alt="dirty">
-                    <img class="image" src="assets/images/clear.png" alt="clear">
-                </div>
-                <div class="swiper-slide result_slider-item">
-                    <img class="image slider_image" src="assets/images/dirty.png" alt="dirty">
-                    <img class="image" src="assets/images/clear.png" alt="clear">
-                </div>
-            </div>
-            <div class="swiper-button-prev bubble">
-                <img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__prev">
-            </div>
-            <div class="swiper-button-next bubble">
-                <img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__next">
-            </div>
+			<div class="swiper-wrapper">
+				<div class="swiper-slide result_slider-item">
+					<img class="image slider_image" src="assets/images/dirty.png" alt="dirty">
+					<img class="image" src="assets/images/clear.png" alt="clear">
+				</div>
+				<div class="swiper-slide result_slider-item">
+					<img class="image slider_image" src="assets/images/dirty.png" alt="dirty">
+					<img class="image" src="assets/images/clear.png" alt="clear">
+				</div>
+				<div class="swiper-slide result_slider-item">
+					<img class="image slider_image" src="assets/images/dirty.png" alt="dirty">
+					<img class="image" src="assets/images/clear.png" alt="clear">
+				</div>
+			</div>
+			<div class="swiper-button-prev bubble">
+				<img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__prev">
+			</div>
+			<div class="swiper-button-next bubble">
+				<img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__next">
+			</div>
 		</div>
-        <div class="swiper-pagination"></div>
-        <button class="button_filled uppercase result_button">
+		<div class="swiper-pagination"></div>
+		<button class="button_filled uppercase result_button">
 			Записаться
 		</button>
 	</section>
@@ -875,7 +897,12 @@
 			Отзывы
 		</h1>
 		<!-- <div class="line"></div> -->
-		<div style="width:560px;height:800px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/181485750211?comments"></iframe><a href="https://yandex.ru/maps/org/laser_house/181485750211/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">Laser House на карте Волгодонска — Яндекс Карты</a></div>
+		<div style="width:560px;height:800px;overflow:hidden;position:relative;"><iframe
+				style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box"
+				src="https://yandex.ru/maps-reviews-widget/181485750211?comments"></iframe><a
+				href="https://yandex.ru/maps/org/laser_house/181485750211/" target="_blank"
+				style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">Laser
+				House на карте Волгодонска — Яндекс Карты</a></div>
 		</div>
 
 	</section>
@@ -886,46 +913,46 @@
 		</h1>
 		<!-- <div class="line"></div> -->
 		<div class="swiper swiper2">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide result_slider-item example-slide">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide result_slider-item example-slide">
 					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
-                </div>
-                <div class="swiper-slide result_slider-item">
+				</div>
+				<div class="swiper-slide result_slider-item">
 					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
-                </div>
-                <div class="swiper-slide result_slider-item">
+				</div>
+				<div class="swiper-slide result_slider-item">
 					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
-                </div>
-                <div class="swiper-slide result_slider-item">
+				</div>
+				<div class="swiper-slide result_slider-item">
 					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
-                </div>
-                <div class="swiper-slide result_slider-item">
+				</div>
+				<div class="swiper-slide result_slider-item">
 					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
-                </div>
-                <div class="swiper-slide result_slider-item">
+				</div>
+				<div class="swiper-slide result_slider-item">
 					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
-                </div>
-                <div class="swiper-slide result_slider-item">
+				</div>
+				<div class="swiper-slide result_slider-item">
 					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
-                </div>
-                <div class="swiper-slide result_slider-item">
+				</div>
+				<div class="swiper-slide result_slider-item">
 					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
-                </div>
-                <div class="swiper-slide result_slider-item">
+				</div>
+				<div class="swiper-slide result_slider-item">
 					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
-                </div>
-                <div class="swiper-slide result_slider-item">
+				</div>
+				<div class="swiper-slide result_slider-item">
 					<img class="image slider_image" src="assets/images/testimonial.png" alt="testimonial">
-                </div>
-            </div>
+				</div>
+			</div>
 			<div class="swiper-opacity-left"></div>
 			<div class="swiper-opacity-right"></div>
-            <div class="swiper-button-prev bubble">
-                <img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__prev">
-            </div>
-            <div class="swiper-button-next bubble">
-                <img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__next">
-            </div>
+			<div class="swiper-button-prev bubble">
+				<img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__prev">
+			</div>
+			<div class="swiper-button-next bubble">
+				<img src="assets/icons/down-arrow.png" alt="arrow" class="arrow slider_arrow__next">
+			</div>
 		</div>
 	</section>
 
@@ -936,15 +963,12 @@
 		<div class="line"></div>
 		<div class="accordion qna_accordion">
 			<div class="accordion-item qna_accordion-item">
-				<div 
-					class="accordion-button qna_accordion-button"
-					style="
+				<div class="accordion-button qna_accordion-button" style="
 						display: flex;
 						align-items: center;
 						height: 100%;
 						width: 60%;
-					"
-				>
+					">
 					<h1 class="bold qna_bold">Противопоказания</h1>
 					<span class="bubble qna_bubble">
 						<img src="assets/icons/plus.png" alt="arrow" class="plus">
@@ -952,62 +976,60 @@
 				</div>
 				<div class="accordion-content qna_accordion-content" style="width: 60%; margin: 0;">
 					<p class="regular">
-						<ul>
-							<li>Беременность и лактация</li>
-							<li>Свежий загар (до 7 дней)</li>
-							<li>Эпилепсия</li>
-							<li>Фотодерматоз</li>
-							<li>Прием фотосенсибилизирующих препартов (антибиотики тетрациклинового ряда, фторхинолоны, зверобой и т.д)</li>
-							<li>Прием препарата Роаккутан в течение 6 месяцев до процедуры</li>
-							<li>Гипертермия</li>
-							<li>Воспаления, изменения и нарушение целостности кожного покрова в зоне эпиляции</li>
-							<li>Грипп, орви и другие острые инфекционные заболевания</li>
-							<li>Нарушение свертываемости крови и применение препаратов снижающих свертываемость</li>
-							<li>Вирус герпеса в стадии обострения, келлоидные рубцы, металлические импланты, в том числе «золотые нити» в зоне воздействия</li>
-							<li>Наличие кардиостимулятора или кохлеарного имплантан</li>
-							<li>Седые и пушковые волосы</li>
-						  </ul>
+					<ul>
+						<li>Беременность и лактация</li>
+						<li>Свежий загар (до 7 дней)</li>
+						<li>Эпилепсия</li>
+						<li>Фотодерматоз</li>
+						<li>Прием фотосенсибилизирующих препартов (антибиотики тетрациклинового ряда, фторхинолоны, зверобой и т.д)
+						</li>
+						<li>Прием препарата Роаккутан в течение 6 месяцев до процедуры</li>
+						<li>Гипертермия</li>
+						<li>Воспаления, изменения и нарушение целостности кожного покрова в зоне эпиляции</li>
+						<li>Грипп, орви и другие острые инфекционные заболевания</li>
+						<li>Нарушение свертываемости крови и применение препаратов снижающих свертываемость</li>
+						<li>Вирус герпеса в стадии обострения, келлоидные рубцы, металлические импланты, в том числе «золотые нити»
+							в зоне воздействия</li>
+						<li>Наличие кардиостимулятора или кохлеарного имплантан</li>
+						<li>Седые и пушковые волосы</li>
+					</ul>
 					</p>
 				</div>
 			</div>
 			<div class="accordion-item qna_accordion-item">
-				<div 
-					class="accordion-button qna_accordion-button"
-					style="
+				<div class="accordion-button qna_accordion-button" style="
 						display: flex;
 						align-items: center;
 						height: 100%;
 						width: 60%;
-					"
-				>
+					">
 					<h1 class="bold qna_bold">Подготовка к процедуре</h1>
 					<span class="bubble qna_bubble">
 						<img src="assets/icons/plus.png" alt="arrow" class="plus">
 					</span>
 				</div>
-				<div class="accordion-content qna_accordion-content" 
-				style="width: 60%; margin: 0;">
+				<div class="accordion-content qna_accordion-content" style="width: 60%; margin: 0;">
 					<p class="regular">
 						За 1 день до процедуры тщательно побрить волосы эпилируемой зоны.
 						<br>
-						За 10-14 дней до проведения процедуры нельзя посещать солярий или загорать под прямыми солнечными лучами. Мы не рекомендуем загорать на активном солнце перед эпиляцией, пользоваться кремами для загара.
-						<br>						
-						За 2 недели до проведения лазерной эпиляции следует исключить все другие виды депиляции кроме бритья.Нельзя выщипывать, удалять воском.
-						<br>						
-						Не пользоваться спиртосодержащими лосьонами/тониками за 3 дня до процедуры и 3 дня после прохождения лазерной эпиляции.
+						За 10-14 дней до проведения процедуры нельзя посещать солярий или загорать под прямыми солнечными лучами. Мы
+						не рекомендуем загорать на активном солнце перед эпиляцией, пользоваться кремами для загара.
+						<br>
+						За 2 недели до проведения лазерной эпиляции следует исключить все другие виды депиляции кроме бритья.Нельзя
+						выщипывать, удалять воском.
+						<br>
+						Не пользоваться спиртосодержащими лосьонами/тониками за 3 дня до процедуры и 3 дня после прохождения
+						лазерной эпиляции.
 					</p>
 				</div>
 			</div>
 			<div class="accordion-item qna_accordion-item">
-				<div 
-					class="accordion-button qna_accordion-button"
-					style="
+				<div class="accordion-button qna_accordion-button" style="
 						display: flex;
 						align-items: center;
 						height: 100%;
-						width: 80%;
-					"
-				>
+						width: 60%;
+					">
 					<h1 class="bold qna_bold">Уход после процедуры</h1>
 					<span class="bubble qna_bubble">
 						<img src="assets/icons/plus.png" alt="arrow" class="plus">
@@ -1015,17 +1037,19 @@
 				</div>
 				<div class="accordion-content qna_accordion-content" style="width: 60%; margin: 0;">
 					<p class="regular">
-						<ul>
-							<li>7 дней после процедуры не загорать, не посещать солярий</li>
-							<li>3 дня после процедуры воздержаться от массажа эпилируемого участка, исключить скрабирование</li>
-							<li>3 дня после процедуры не принимать горячую ванну, не посещать бассейн с хлорированной водой, сауну, баню</li>
-							<li>3 дня после процедуры не протиратьзону эпиляции спиртосодержащими средствами</li>
-							<li>При пребывании на солнце в течение 14 дней необходимо наносить защитный крем SPF 50 на обработанном участке кожи</li>
-						  </ul>
+					<ul>
+						<li>7 дней после процедуры не загорать, не посещать солярий</li>
+						<li>3 дня после процедуры воздержаться от массажа эпилируемого участка, исключить скрабирование</li>
+						<li>3 дня после процедуры не принимать горячую ванну, не посещать бассейн с хлорированной водой, сауну, баню
+						</li>
+						<li>3 дня после процедуры не протиратьзону эпиляции спиртосодержащими средствами</li>
+						<li>При пребывании на солнце в течение 14 дней необходимо наносить защитный крем SPF 50 на обработанном
+							участке кожи</li>
+					</ul>
 					</p>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</section>
 
 	<section class="consultation">
@@ -1034,17 +1058,17 @@
 				<h1 class="italic center consultation_italic">
 					Остались вопросы?
 					<br>
-	                Запишитесь
-	                <br>
-	                на консультацию
-	                <br>
-	                к специалисту 
+					Запишитесь
+					<br>
+					на консультацию
+					<br>
+					к специалисту
 				</h1>
 				<div class="line"></div>
 				<h3 class="uppercase center consultation_uppercase">
 					Закажите обратный звонок
 					<br>
-					или напишите нам 
+					или напишите нам
 				</h3>
 				<div class="button-group" style="display: flex;">
 					<button class="button_filled uppercase">
@@ -1065,93 +1089,95 @@
 		<footer class="footer">
 			<div class="footer-inner">
 				<div class="left footer_left">
-				<!-- <img src="assets/images/furniture.png" alt="#"> -->
-				<!-- <div class="slider-indicator">
+					<!-- <img src="assets/images/furniture.png" alt="#"> -->
+					<!-- <div class="slider-indicator">
 					<div class="slider-indicator-item active" id="indicator_1"></div>
 					<div class="slider-indicator-item" id="indicator_2"></div>
 					<div class="slider-indicator-item" id="indicator_3"></div>
 				</div> -->
-				<h1 class="italic center footer_italic">
-					Контакты
-				</h1>
-				<div class="line"></div>
-				<div class="contacts footer_contacts">
-					<p class="uppercase center footer_uppercase">
-						Волгодонск, ул. Кошевого, 27
-						<br>
-						Ежедневно 10:00 – 20:00
-					</p>
-			</div>
-			<div class="right footer_right">
-				<h1 class="italic center footer_italic">
-					Контакты
-				</h1>
-				<div class="line"></div>
-				<div class="contacts footer_contacts">
-					<p class="uppercase center footer_uppercase">
-						Волгодонск, ул. Кошевого, 27
-						<br>
-						Ежедневно 10:00 – 20:00
-					</p>
-				</div>
+					<h1 class="italic center footer_italic">
+						Контакты
+					</h1>
+					<div class="line"></div>
+					<div class="contacts footer_contacts">
+						<p class="uppercase center footer_uppercase">
+							Волгодонск, ул. Кошевого, 27
+							<br>
+							Ежедневно 10:00 – 20:00
+						</p>
+					</div>
+					<div class="right footer_right">
+						<h1 class="italic center footer_italic">
+							Контакты
+						</h1>
+						<div class="line"></div>
+						<div class="contacts footer_contacts">
+							<p class="uppercase center footer_uppercase">
+								Волгодонск, ул. Кошевого, 27
+								<br>
+								Ежедневно 10:00 – 20:00
+							</p>
+						</div>
 						<!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5e4e7054e888bc3bc722ca619b914b3f0b05c94956b19f6886d323abda74c052&amp;width=100%25&amp;height=468&amp;lang=ru_RU&amp;scroll=true"></script>						 -->
-					</p>
+						</p>
+					</div>
 				</div>
-			    </div>
 			</div>
 
-			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5e4e7054e888bc3bc722ca619b914b3f0b05c94956b19f6886d323abda74c052&amp;width=100%25&amp;height=468&amp;lang=ru_RU&amp;scroll=true"></script>						
+			<script type="text/javascript" charset="utf-8" async
+				src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5e4e7054e888bc3bc722ca619b914b3f0b05c94956b19f6886d323abda74c052&amp;width=100%25&amp;height=468&amp;lang=ru_RU&amp;scroll=true"></script>
 		</footer>
 	</div>
 
-    <!--  Swiper.js scripts  -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+	<!--  Swiper.js scripts  -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
+	<!-- Initialize Swiper -->
+	<script>
 
-        const swiper1 = new Swiper(".swiper1", {
-            slidesPerView: 1,
-            loop: true,
-            observer: true,
-            observeParents: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            }
-        });
+		const swiper1 = new Swiper(".swiper1", {
+			slidesPerView: 1,
+			loop: true,
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			}
+		});
 
-        const swiper2 = new Swiper(".swiper2", {
-            slidesPerView: 5,
-            spaceBetween: 30,
-            observer: true,
-            observeParents: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-			    1024: {
-			    	slidesPerView: 4
-			    },
-			    770: {
-			    	slidesPerView: 3,
-			    },
-			    425: {
-			    	slidesPerView: 1
-			    }
-		    }	
-        });
-    </script>
+		const swiper2 = new Swiper(".swiper2", {
+			slidesPerView: 5,
+			spaceBetween: 30,
+			observer: true,
+			observeParents: true,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			breakpoints: {
+				1024: {
+					slidesPerView: 4
+				},
+				770: {
+					slidesPerView: 3,
+				},
+				425: {
+					slidesPerView: 1
+				}
+			}
+		});
+	</script>
 
-    <!--  Scripts  -->
+	<!--  Scripts  -->
 	<script src="assets/js/accordion.js"></script>
 	<script src="assets/js/slider.js"></script>
 	<script src="assets/js/drag-to-scroll.js"></script>
 	<script src="assets/js/viewport.js"></script>
 </body>
+
 </html>
